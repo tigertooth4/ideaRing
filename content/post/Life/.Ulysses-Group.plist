@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createMarkedFile</key>
+	<false/>
+	<key>sheetClusters</key>
+	<array>
+		<array>
+			<string>12.12.12.md</string>
+		</array>
+		<array>
+			<string>Community Dinner.md</string>
+		</array>
+		<array>
+			<string>Eynard-Orantin 以及疑问.md</string>
+		</array>
+		<array>
+			<string>Finally met her again!.md</string>
+		</array>
+		<array>
+			<string>Some Piano Video Tutorials.md</string>
+		</array>
+		<array>
+			<string>Summary of my 2012.md</string>
+		</array>
+		<array>
+			<string>Thoughts.md</string>
+		</array>
+		<array>
+			<string>U are in my heart.md</string>
+		</array>
+		<array>
+			<string>形变.md</string>
+		</array>
+		<array>
+			<string>校园、春天.md</string>
+		</array>
+		<array>
+			<string>梦.md</string>
+		</array>
+		<array>
+			<string>Ohlife.md</string>
+		</array>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kossel XL 构建记（2） Hotend decision - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tt4" />
+  <meta name="description" content="今天搜到一个较为便宜的 E3D 挤出头，某宝代号为 36891850532。厂家附赠挤出头2个，貌似不错。 编了一下午程序，来计算一个斜洛朗级数的开方。" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.45.1" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_02/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Kossel XL 构建记（2） Hotend decision" />
+<meta property="og:description" content="今天搜到一个较为便宜的 E3D 挤出头，某宝代号为 36891850532。厂家附赠挤出头2个，貌似不错。 编了一下午程序，来计算一个斜洛朗级数的开方。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_02/" />
+
+
+
+<meta property="article:published_time" content="2014-07-23T22:30:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2014-07-23T22:30:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kossel XL 构建记（2） Hotend decision">
+<meta itemprop="description" content="今天搜到一个较为便宜的 E3D 挤出头，某宝代号为 36891850532。厂家附赠挤出头2个，貌似不错。 编了一下午程序，来计算一个斜洛朗级数的开方。">
+
+
+<meta itemprop="datePublished" content="2014-07-23T22:30:00&#43;00:00" />
+<meta itemprop="dateModified" content="2014-07-23T22:30:00&#43;00:00" />
+<meta itemprop="wordCount" content="453">
+
+
+
+<meta itemprop="keywords" content="3dp,Kossel,DIY," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记（2） Hotend decision"/>
+<meta name="twitter:description" content="今天搜到一个较为便宜的 E3D 挤出头，某宝代号为 36891850532。厂家附赠挤出头2个，貌似不错。 编了一下午程序，来计算一个斜洛朗级数的开方。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kossel XL 构建记（2） Hotend decision</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-07-23 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      <p>今天搜到一个较为便宜的 <a href="http://item.taobao.com/item.htm?spm=a230r.1.14.15.KNxOPA&amp;id=36891850532&amp;ns=1#detail">E3D 挤出头</a>，某宝代号为 36891850532。厂家附赠挤出头2个，貌似不错。</p>
+
+<p>编了一下午程序，来计算一个斜洛朗级数的开方。注意，要想开方的话是有条件的，目前我能想到的一类可开方的
+算子是当级数的系数环上的自同态是恒等映射的时候，否则要想求解系数的话需要解环上的两个同态方程（我目前
+还不知道有没有统一的解法）。这个与主题无关，我会放在另一篇文章中另说。</p>
+
+<p>这个台湾朋友的博客非常好，在此顺便分享下：<a href="http://diy3dprint.blogspot.tw/search?updated-max=2014-02-24T23:35:00%2B08:00&amp;max-results=7&amp;start=12&amp;by-date=false">http://diy3dprint.blogspot.tw/</a></p>
+
+<p>关于挤出头散热问题的文章，可以看上述台湾朋友的博客：
+<a href="http://diy3dprint.blogspot.tw/2014/01/blog-post.html">http://diy3dprint.blogspot.tw/2014/01/blog-post.html</a>。我刚看完，涨姿势了</p>
+
+<p>以下是今天看到的一些资源：</p>
+
+<ul>
+<li><a href="http://forums.reprap.org/read.php?178,342575">Kossel 2020 build log</a></li>
+<li><a href="https://github.com/Jaydmdigital/Kossel_2020">Jaydmdigital/Kossell<em>2020</em>@github</a></li>
+<li><a href="http://www.thingiverse.com/thing:215438">Kossel mini Prime line roller carriage @ thingivise</a></li>
+<li><a href="http://www.electronhacks.com/2013/12/kossel-mini-3d-printer-vertical-movement-tutorial/">Kossel mini 3d printer vertical movement Tutorial</a></li>
+<li>看 台湾朋友关于构造 Atom 印表机的文章也受益匪浅，Atom 的尺寸大概是 360x720</li>
+</ul>
+
+<p>目前需要确定一下框架使用的 STL 文件方案，以及滑轨的方案，这样才能去买滑轮啊</p>
+
+<p>还有，看到 Atom 用的挤出头自调平方案也长草了，明天去谷歌一下 😊</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">tt4</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2014-07-23</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/3dp/">3dp</a>
+          
+          <a href="/tags/kossel/">Kossel</a>
+          
+          <a href="/tags/diy/">DIY</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_03/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Kossel XL 构建记（3） Planning the frame design </span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/3d%E6%89%93%E5%8D%B0%E6%9C%BA/kosselxl/kossel_xl_building_log_01/">
+            <span class="next-text nav-default">Kossel XL 构建记 (1) Shift of linear carriage design, design goals</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>childOrder</key>
+	<array>
+		<string>_images</string>
+		<string>KosselXL</string>
+		<string>Rostock</string>
+	</array>
+	<key>createMarkedFile</key>
+	<false/>
+	<key>sheetClusters</key>
+	<array>
+		<array>
+			<string>Kossel Planning.md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (12).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (21).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (22).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (23).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (24).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (13).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (14).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (15).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (16).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (17).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (18).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (19).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (20).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning（2）.md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (3).md</string>
+		</array>
+		<array>
+			<string>Rostock Mini Pro J-head Hotend fan holder.md</string>
+		</array>
+		<array>
+			<string>Rostock Hotend Mount Modification.md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (4).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (5).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning（6）.md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (7).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (8).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (9).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (10).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (11).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (25).md</string>
+		</array>
+		<array>
+			<string>Kossel Planning (26).md</string>
+		</array>
+	</array>
+</dict>
+</plist>
