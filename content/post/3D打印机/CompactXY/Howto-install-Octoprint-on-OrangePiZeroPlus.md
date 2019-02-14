@@ -1,6 +1,6 @@
 ---
 date: '2018-09-04T15:54:33+08:00'
-draft: true
+draft: false
 title: 如何在 OrangePiZeroPlus 上安装 Octoprint
 tags: ["3DP","OctoPrint","armbian","DIY"]
 ---

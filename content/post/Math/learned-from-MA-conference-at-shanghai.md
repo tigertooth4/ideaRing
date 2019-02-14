@@ -1,6 +1,6 @@
 ---
 date: '2018-08-27T15:34:47+08:00'
-draft: true
+draft: false
 title: What I’ve learned at MA conference in ShangHai
 ---
 
