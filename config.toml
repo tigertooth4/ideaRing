@@ -4,6 +4,7 @@ defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... 
 title = "T&M - A man's thinking and making"
 enableRobotsTXT = true
 enableEmoji = true
+disablePathToLower = true 
 theme = "even"
 
 preserveTaxonomyNames = true
