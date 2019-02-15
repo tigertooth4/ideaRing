@@ -1,7 +1,7 @@
 ---
 title: "纪念即将关闭的 Ohlife"
 date: "2014-10-13 22:00:00"
-draft: false
+draft: true
 tags: ["life" , "ohlife" , "memory" , "moment"]
 author: "tt4"
 ---
