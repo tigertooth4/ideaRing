@@ -1,7 +1,7 @@
 ---
 title: "Summary of my 2012"
 date: "2013-01-20 14:07:47"
-draft: false
+draft: true
 tags: ["2012" , "abroad" , "cry" , "drunk" , "exciting" , "life" , "miracle" , "summary" , "travel"]
 author: "tt4"
 ---
