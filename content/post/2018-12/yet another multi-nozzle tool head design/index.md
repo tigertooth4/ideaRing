@@ -1,11 +1,13 @@
-Hi guys,
-
- 
+---
+title: "Yet Another Multi Nozzle Tool Head Design"
+date: 2018-12-12T10:44:22+08:00
+draft: false
+---
 
 At the end of this year, I would like to share my design of a multi-nozzle tool
 head. You may or may not remember that a year ago I've posted some results of
 dual material 3d printing on my DIY Ultimaker 2
-(<https://plus.google.com/+XiaojunLiu/posts/4kjzNmNFms>). I said I used a
+(<https:/plus.google.com/+XiaojunLiu/posts/4kjzNmNFms>). I said I used a
 different approach which has not been implemented (at least I didn’t find)
 elsewhere.
 
@@ -18,7 +20,7 @@ so that the lens engaging is pointing towards the object).
 
  
 
-![](post.images/XY0a5i.png)
+![](./images/2018-12-12-fig1.png)
 
  
 
@@ -29,13 +31,13 @@ the nozzle engaged will be pointing perpendicularly towards the heated bed.
 
  
 
-![](post.images/Sbbk8O.png)
+![](./images/2018-12-12-fig2.png)
 
  
 
 Then the heat breaks will be inserted and mounted into a single heatsink.
 
-![](post.images/oKvrAY.png)
+![](./images/2018-12-12-fig3.png)
 
  
 
@@ -45,7 +47,7 @@ wobbling when performing the rotation.
 
  
 
-![](post.images/7C8Q6D.png)
+![](./images/2018-12-12-fig4.png)
 
  
 
@@ -58,7 +60,7 @@ rotation freedom is eliminated.
 
  
 
-![](post.images/8R5Jsv.png)
+![](./images/2018-12-12-fig5.png)
 
  
 
@@ -73,7 +75,7 @@ So that if the rack is pushed from either sides, the drive gear rotates.
 To do that, two rods must be mounted on each sides of the printer, so that if
 the tool head moves towards the end of the rod, the rack will be pushed.
 
-![](post.images/CLMv9B.png)
+![](./images/2018-12-12-fig6.png)
 
 Then a printed pivot part will connects these components together. The pivot
 part is also good for holding all the wires and Bowden tubes, which will be
@@ -83,7 +85,7 @@ connected to the nozzles.
 
  
 
-![](post.images/0yJ8Xe.png)
+![](./images/2018-12-12-fig7.png)
 
  
 
@@ -92,19 +94,17 @@ cooling the heatsink, and the right blower fan is for cooling the printed parts.
 
  
 
-![](post.images/nWHi7r.png)
+![](./images/2018-12-12-fig8.png)
 
  
 
 Finally, at the bottom a sheet metal piece is mounted to the enclosure to
-prevent ooz
-
-from un-used nozzle. Also a printed shroud guides the air flow out from the
+prevent ooz from un-used nozzle. Also a printed shroud guides the air flow out from the
 blower fan to the printed parts.
 
  
 
-![](post.images/W4Rknl.png)
+![](./images/2018-12-12-fig9.png)
 
  
 
@@ -114,18 +114,18 @@ machine.
 
  
 
-![](post.images/o5Ogat.png)
+![](./images/2018-12-12-fig10.png)
 
  
 
-![](post.images/guen2D.png)
+![](./images/2018-12-12-fig11.png)
 
-![](post.images/wOIMgF.png)
+![](./images/2018-12-12-fig12.png)
 
 As you may see here currently only two nozzles have been mounted. The repeat
 accuracy is impressive, I’ve printed a lot of dual-extrusion models, such as the
 Gyro, the traffic cone, the hand-drill and also a strandbeest I designed on
-thingiverse (<https://www.thingiverse.com/thing:3263196>).
+thingiverse (<https:/www.thingiverse.com/thing:3263196>).
 
  
 
