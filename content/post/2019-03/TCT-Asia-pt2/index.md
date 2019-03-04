@@ -1,7 +1,8 @@
 ---
 title: TCT Asia 观后感 partII
 date: 2019-03-03T23:00:35+08:00
-draft: true
+draft: false
+tags: ["TCT", "FDM", "Makerbot", "dualextrusion", "Polymaker", "Clariant", "eSUN", "kexcelled", "Markforged", "3DP","3DPrinting","ShangHai"]
 ---
 
 上次我们聊了聊 TCT Asia 上的 Makerbot 新机，这一次，让我们简要的说一说 对本次 TCT Asia 的其它感受。

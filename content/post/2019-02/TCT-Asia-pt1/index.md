@@ -2,6 +2,7 @@
 title: "TCT Asia 观后感 part1"
 date: 2019-02-23T16:45:52+08:00
 draft: false
+tags: ["TCT", "FDM", "Makerbot", "dualextrusion","design","PVA","extruder","UI","Steelsheet","3DP","3DPrinting","ShangHai"]
 
 ---
 
