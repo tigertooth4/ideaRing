@@ -1,7 +1,8 @@
 ---
 title: "Marlin2.0 bugfix + Cohesion3D-remix 上使用 TMC2130 驱动"
 date: 2019-03-21T23:30:38+08:00
-draft: true
+draft: false
+tags: ["TMC2130","Cohesion3d","Marlin","Wiring","StealthChop", "SpreadCycle"]
 
 ---
 
@@ -106,7 +107,7 @@ TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是"�
 # 硬件准备
 
 - 参考 thingiverse 上  MKS Gen L 的连线图，如下
-  ![image-20190406221109368](/Users/lxj/Dropbox/Apps/Hugo/ideaRing/content/post/2019-03/marlin-2.0-read-report/images/mks-genl-wiring.png)
+  ![MKS Gen L Wiring (From thingiverse)](./images/mks-genl-wiring.png)
 
 - Cohesion3D-Remix 主板上使用了网络接口的 3 个 pin, 来实现主板和 TMC2130 驱动的 SPI 通信，所用的 3个 pin 为![c3d-pinout](./images/c3d-pinout.png)
 
