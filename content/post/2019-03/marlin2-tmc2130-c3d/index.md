@@ -8,7 +8,7 @@ tags: ["TMC2130","Cohesion3d","Marlin","Wiring","StealthChop", "SpreadCycle"]
 
 TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是"失速检测" （Stall-detection) 功能，以及由此而来的"无传感器归零" （Homeless-sensing). 对我这个电路外行，也只有在这块驱动芯片发布多年，各种视频、资料都齐备之后，才有机会尝试. 
 
-由于家里有很多块定制的 C3D-remix 主板，再加上最近一两年一直折腾小号的 CoreXY 机器使用的就是这块主板，因此我决定先买几块 2130 驱动，用这块主板试验一下. 
+由于家里有很多块定制的 C3D-remix 主板[^1]，再加上最近一两年一直折腾小号的 CoreXY 机器使用的就是这块主板，因此我决定先买几块 2130 驱动，用这块主板试验一下. [^2]
 
 注意：要使用 TMC2130 的这些功能，需要开启它的 SPI 模式，在有些驱动板上，这个模式是被禁用的，需要去掉一块焊锡才可以开启。
 
@@ -224,3 +224,7 @@ TMC2130 是一款非常有趣的步进电机驱动，最吸引我的地方是"�
   这句话的意思是在 Z 和 E 轴开启 stealth chop 模式.  开启后，别忘了用 M500 命令保存。
 
 从现在开始，我们就正式进入智能驱动的神奇世界了！
+
+[^1]:Cohesion3d-Remix 主板可以在某宝买到，见某宝链接 <https://item.taobao.com/item.htm?spm=a230r.1.14.1.4acd3e70BaS7Zw&id=558549657644&ns=1&abbucket=10#detail>
+[^2]:本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <https://www.youtube.com/watch?v=OUadiW5QLBE>
+
