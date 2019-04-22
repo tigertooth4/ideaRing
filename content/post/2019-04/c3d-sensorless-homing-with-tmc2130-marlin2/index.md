@@ -6,7 +6,7 @@ tags: ["TMC2130","Cohesion3d","Remix","Marlin2.0","Sensorless","Homing"]
 
 ---
 
-自从小豆子出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。[^1]
+自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无传感器归零功能，使用的是 TMC2130 步进驱动的智能控制功能，可以根据步进电机失速的表现来对电机所处的状态进行分析。[^1]
 
 # 固件设置
 
@@ -51,6 +51,12 @@ tags: ["TMC2130","Cohesion3d","Remix","Marlin2.0","Sensorless","Homing"]
 
 这一步是显然的。
 
-#上电测试
+# 上电测试
+
+- 使用 G28 X, G28 Y 可以让 X, Y 轴单独归零，输入后观察归零情况。若撞到边框还不停止，则要调整归零灵敏度（使用 M914 命令）。在我这里的情况是 X 轴 归零正常，Y 轴没有归零就停住了。
+- M914 命令的使用方法是：若只输入 M914，则显示当前灵敏度，marlin 规定的灵敏度范围是从 -63 到 64，数值越大越不敏感；初始时的灵敏度应该都为 0;
+- 我将 X Y 方向的灵敏度设置为 1: M914 X1 Y1; 发现 Y 轴可以正常归零了。
+- 最后记得用 M500 保存设置。
+- 不知是否是因为 CoreXY 的 X, Y 方向是联合控制的，我这里独立归零没有问题，但当 X 和 Y 同时归零时，似乎只有 X 归零了，Y 并不归零，看来还需要进一步研究固件，加以调整。
 
 [^1]:本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <https://www.youtube.com/watch?v=OUadiW5QLBE>
