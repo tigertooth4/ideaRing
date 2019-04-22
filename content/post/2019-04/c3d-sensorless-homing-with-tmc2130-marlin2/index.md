@@ -1,7 +1,7 @@
 ---
 title: "Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零"
 date: 2019-04-20T22:47:37+08:00
-draft: true
+draft: false
 tags: ["TMC2130","Cohesion3d","Remix","Marlin2.0","Sensorless","Homing"]
 
 ---
