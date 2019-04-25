@@ -59,4 +59,16 @@ tags: ["TMC2130","Cohesion3d","Remix","Marlin2.0","Sensorless","Homing"]
 - 最后记得用 M500 保存设置。
 - 不知是否是因为 CoreXY 的 X, Y 方向是联合控制的，我这里独立归零没有问题，但当 X 和 Y 同时归零时，似乎只有 X 归零了，Y 并不归零，看来还需要进一步研究固件，加以调整。
 
+# 更新
+
+- 可以在 Configuration.h 里面激活如下命令以记录运行时系统反馈的信息：
+
+  ```c++
+  #define DEBUG_LEVELING_FEATURE
+  ```
+
+- 使用 M111 S32 或 M111 S247 使系统信息能够被最大程度的记录下来
+
+- 使用 G28 归零。
+
 [^1]:本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <https://www.youtube.com/watch?v=OUadiW5QLBE>
