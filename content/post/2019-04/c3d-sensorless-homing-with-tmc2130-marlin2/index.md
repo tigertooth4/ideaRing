@@ -71,4 +71,16 @@ tags: ["TMC2130","Cohesion3d","Remix","Marlin2.0","Sensorless","Homing"]
 
 - 使用 G28 归零。
 
+# 更新 （二）
+
+经调试，发现主要问题是：当 X Y 同时归零时，总是 X 可以归零，但 Y 在归零途中就会停下；如果分别归零，当 Y 归零后，X 可以顺利归零；反之则不行。量了一下 X 导轨与前边框的间距，发现左侧比右侧稍大。左侧是归零方向。以此判断，不能实现同时归零的原因是线性导轨与框架不完全平行，导致 X 方向归零后， Y 在归零途中撞到框架而提前归零。
+
+由于调节导轨平行度工作量实在太大，无奈之下，只好先在固件 Configuration_adv.h 中设置归零顺序为先 Y 再 X
+
+```c++
+#define HOME_Y_BEFORE_X
+```
+
+临时解决问题。
+
 [^1]:本文参考了 YouTube 视频：TMC2130 Guide - stepper motors driver upgrades part 3 - Sensorless homing <https://www.youtube.com/watch?v=OUadiW5QLBE>
