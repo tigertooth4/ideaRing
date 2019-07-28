@@ -167,5 +167,6 @@ HAS_LCD_MENU 这个宏。而支持这个宏的屏幕，必须是一块 ULTIPANEL
 
 ![连线图](./images/wiring.png)
 
-Marlin 代码的改动
+Marlin 代码
 =================
+见 [我的 Marlin ](https://github.com/tigertooth4/Marlin/tree/bugfix-2.0.x). 关于我对 Marlin 中代码修改的细节，将在今后的文章中进一步介绍。
