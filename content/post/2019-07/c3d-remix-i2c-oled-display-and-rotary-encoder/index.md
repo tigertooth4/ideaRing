@@ -1,7 +1,8 @@
 ---
 date: '2019-07-23T22:58:00+08:00'
-draft: true
+draft: false
 title: 为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器
+tags: ["i2c","Cohesion3d","Remix","Marlin2.0","OLED","SSD1306","SH1106"]
 ---
 
 在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix
