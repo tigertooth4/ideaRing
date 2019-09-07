@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>生成量子曲线的代码 - Even - A super concise theme for Hugo</title>
+  <title>生成量子曲线的代码 - 思与制 - A guy&#39;s thinking and making</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,14 +17,7 @@
 
 
 <meta name="author" content="tt4" />
-  <meta name="description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;amp;&amp;amp; m &amp;gt; 0) || k &amp;gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  " />
+  <meta name="description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;amp;&amp;amp; m &amp;gt; 0) || k &amp;gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -33,10 +26,10 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 
 
 
-<meta name="generator" content="Hugo 0.45.1" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" />
+<link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -57,42 +50,14 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 
 
 <meta property="og:title" content="生成量子曲线的代码" />
-<meta property="og:description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  " />
+<meta property="og:description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" />
-
-
-
+<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/%E7%94%9F%E6%88%90%E9%87%8F%E5%AD%90%E6%9B%B2%E7%BA%BF%E7%9A%84%E4%BB%A3%E7%A0%81/" />
 <meta property="article:published_time" content="2013-11-02T04:03:56&#43;00:00"/>
-
 <meta property="article:modified_time" content="2013-11-02T04:03:56&#43;00:00"/>
 
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="生成量子曲线的代码">
-<meta itemprop="description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  ">
+<meta itemprop="description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p">
 
 
 <meta itemprop="datePublished" content="2013-11-02T04:03:56&#43;00:00" />
@@ -104,14 +69,7 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 <meta itemprop="keywords" content="代码," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="生成量子曲线的代码"/>
-<meta name="twitter:description" content="c[0, 0, p, q] := 1;
-c[m, k, p, q] := If[
-(k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0,
-cm - 1, k, p, q
- c[m - 1, k - 1, p, q]];  A[p, q] :=
-x^q &#43; Sum[
-Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}]
- y^p  "/>
+<meta name="twitter:description" content="c[0, 0, p, q] := 1; c[m, k, p, q] := If[ (k == 0 &amp;&amp; m &gt; 0) || k &gt; m, 0, cm - 1, k, p, q c[m - 1, k - 1, p, q]]; A[p, q] := x^q &#43; Sum[ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y^(m - q ) x^m, {m, 1, q - 1}] y^p"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -126,7 +84,7 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
+    <a href="/" class="logo">思与制</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -150,7 +108,7 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
+  <a href="/" class="logo">思与制</a>
 </div>
 
 <nav class="site-navbar">
@@ -187,7 +145,7 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
     
     
 <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
+  <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
     
@@ -226,11 +184,11 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
     
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title">Author</span>
+    <span class="item-title">文章作者</span>
     <span class="item-content">tt4</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title">LastMod</span>
+    <span class="item-title">上次更新</span>
     <span class="item-content">2013-11-02</span>
   </p>
   
@@ -253,12 +211,12 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
           <a class="prev" href="/post/life/some-piano-video-tutorials/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Some Piano Video Tutorials</span>
-            <span class="prev-text nav-mobile">Prev</span>
+            <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/%E5%85%B6%E5%AE%83/%E5%91%A8%E6%97%A5%E5%8E%BB%E6%97%A7%E9%87%91%E5%B1%B1%E6%8E%A5%E6%88%91%E5%A6%88/">
-            <span class="next-text nav-default">周日去旧金山接我妈</span>
-            <span class="next-text nav-mobile">Next</span>
+          <a class="next" href="/post/%E5%85%B6%E5%AE%83/%E4%BD%BF%E7%94%A8-wget-%E4%B8%8B%E8%BD%BD%E4%B8%80%E4%B8%AA%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/">
+            <span class="next-text nav-default">使用 wget 下载一个目录下的所有文件</span>
+            <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
@@ -275,29 +233,18 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
-      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -306,12 +253,12 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
   <span class="copyright-year">
     &copy; 
     
-      2017 - 
-    2018
+      2013 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">olOwOlo</span>
+    <span class="author">XL</span>
   </span>
 </div>
     </footer>
@@ -327,6 +274,30 @@ Inverse[Table[Table[c[m, k, p, q], {k, 1, q}], {m, 1, q}]][[q]][[m]] h^(q - m) y
 
 
 <script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
 
 
 

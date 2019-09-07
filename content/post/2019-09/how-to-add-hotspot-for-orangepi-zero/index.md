@@ -1,9 +1,8 @@
 ---
-date: '2019-09-7T23:13:00+08:00'
+date: '2019-09-07T23:13:00+08:00'
 draft: false
 title: 如何给 OrangePi zero plus 增加热点功能
 tags: ["OrangePi","Octoprint","hotspot","ssh","Marlin","WiFi"]
-
 ---
 
 在之前的博文中，我介绍了如何在 OrangePi Zero plus 上安装 OctoPrint，以 OrangePi zero plus 的性能，运行 OctoPrint 还是绰绰有余的。可以通过 OctoPrint 完美控制打印机的各项功能。美中不足是，如果像我这样，把 OrangePi 安装到了打印机里面，那么当网络环境改变（比如带打印机外出），不方便连接网线的情况下，有没有事先登录过新环境的 WiFi的话，OctoPrint 几乎会变成废柴（因为无法从外部修改 OctoPrint 的设置，连接 WiFi 操纵打印机）。所以，这种情况下，最方便的还是让 OrangePi 自己变成一个热点。这样只需要用手机连接 OrangePi 的热点即可。

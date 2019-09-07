@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Piano on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/piano/</link>
-    <description>Recent content in Piano on Even - A super concise theme for Hugo</description>
+    <title>Piano on 思与制 - A guy&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/piano/</link>
+    <description>Recent content in Piano on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 18 Dec 2013 20:27:05 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/piano/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/piano/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Some Piano Video Tutorials</title>
-      <link>http://localhost:1313/post/life/some-piano-video-tutorials/</link>
+      <link>http://tigertooth4.github.io/post/life/some-piano-video-tutorials/</link>
       <pubDate>Wed, 18 Dec 2013 20:27:05 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/life/some-piano-video-tutorials/</guid>
+      <guid>http://tigertooth4.github.io/post/life/some-piano-video-tutorials/</guid>
       <description>I started learning how to play piano a few months ago. Here’s some great video tutorials I’ve found:
  Canon in D major (Pachelbel): [YouTube](http://www.youtube.com/watch?v=xDObxlDeeRk
  Howl’s moving Castle Merry-go-round of life (by Joe Hisaishi): [YouTube](http://www.youtube.com/watch?v=Zt86xb7s-Io

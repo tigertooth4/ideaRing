@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Symbolic on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/symbolic/</link>
-    <description>Recent content in Symbolic on Even - A super concise theme for Hugo</description>
+    <title>Symbolic on 思与制 - A guy&#39;s thinking and making</title>
+    <link>http://tigertooth4.github.io/tags/symbolic/</link>
+    <description>Recent content in Symbolic on 思与制 - A guy&#39;s thinking and making</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 30 Jul 2014 19:21:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/symbolic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigertooth4.github.io/tags/symbolic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>斜洛朗级数环的软件包 和 FriCAS</title>
-      <link>http://localhost:1313/post/math/oresus-and-fricas/</link>
+      <link>http://tigertooth4.github.io/post/math/oresus-and-fricas/</link>
       <pubDate>Wed, 30 Jul 2014 19:21:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/math/oresus-and-fricas/</guid>
+      <guid>http://tigertooth4.github.io/post/math/oresus-and-fricas/</guid>
       <description>这几天都在忙着写 ORESUS 软件包的一些例子。总算要实现我 4 年（甚至更早以前）的愿望了！那时候和ex游完泳等她的时候就在写 ORESUS 的代码。。。 好吧！现在大家</description>
     </item>
     

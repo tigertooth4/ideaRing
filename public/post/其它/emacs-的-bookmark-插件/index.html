@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - Even - A super concise theme for Hugo</title>
+  <title> - 思与制 - A guy&#39;s thinking and making</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,8 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" />
-  <meta name="description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，" />
+<meta name="author" content="XL" />
+  <meta name="description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&amp;ldquo;attachment_703&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;1024&amp;rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &amp;lsquo;load-path &amp;ldquo;~/.emacs.d/bm/&amp;ldquo;)
+(require &amp;lsquo;bm)
+快捷键设置 (global-set-key (kbd &amp;ldquo;M-S-return&amp;rdquo;) &amp;lsquo;bm-toggle)
+(global-set-key (kbd &amp;ldquo;M-S-down&amp;rdquo;) &amp;lsquo;bm-next)
+(global-set-key (kbd &amp;ldquo;M-S-up&amp;rdquo;) &amp;lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -26,10 +37,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.45.1" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" />
+<link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -50,38 +61,57 @@
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，" />
+<meta property="og:description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84-bookmark-%E6%8F%92%E4%BB%B6/" />
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，">
+<meta itemprop="description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^">
 
 
 
-<meta itemprop="wordCount" content="242">
+<meta itemprop="wordCount" content="47">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Title: Emacs 的 bookmark 插件 Date: 2013-12-23 05:53:47 有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，"/>
+<meta name="twitter:description" content="Title: Emacs 的 bookmark 插件
+Date: 2013-12-23 05:53:47
+有时候经常要在同一个 LaTeX 文件的前后来回跳转，当文件很大时还是十分不便的，因此有个标记位置的插件还是十分必要的。之前用过很久，但是换电脑的时候忘记怎么回事了，于是又搜索了一下，重新发现 joodland 的 bm 这个插件，
+[caption id=&ldquo;attachment_703&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;1024&rdquo;] bm[/caption]
+可以很明显的标记出文章中的某些行，短小精悍，而且也支持文件间跳转，遂记录之。安装很简单，下载下来放在 .emacs.d/ 目录下就可以了。
+设置 非常简单，只要在 .emacs 文件中添加上相应的路径：
+(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/bm/&ldquo;)
+(require &lsquo;bm)
+快捷键设置 (global-set-key (kbd &ldquo;M-S-return&rdquo;) &lsquo;bm-toggle)
+(global-set-key (kbd &ldquo;M-S-down&rdquo;) &lsquo;bm-next)
+(global-set-key (kbd &ldquo;M-S-up&rdquo;) &lsquo;bm-previous)
+这组快捷键用的挺顺手，并且不和系统现有的快捷键冲突 ^_^"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,7 +126,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
+    <a href="/" class="logo">思与制</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -120,7 +150,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
+  <a href="/" class="logo">思与制</a>
 </div>
 
 <nav class="site-navbar">
@@ -157,7 +187,7 @@
     
     
 <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
+  <h2 class="post-toc-title">文章目录</h2>
   
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
@@ -218,11 +248,11 @@
     
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">olOwOlo</span>
+    <span class="item-title">文章作者</span>
+    <span class="item-content">XL</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title">LastMod</span>
+    <span class="item-title">上次更新</span>
     <span class="item-content">0001-01-01</span>
   </p>
   
@@ -241,12 +271,12 @@
           <a class="prev" href="/post/%E5%85%B6%E5%AE%83/draw-graphic-inside-nstextview/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default"></span>
-            <span class="prev-text nav-mobile">Prev</span>
+            <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
           <a class="next" href="/post/%E5%85%B6%E5%AE%83/emacs-%E7%9A%84%E9%A2%9C%E8%89%B2%E8%A1%A5%E5%BC%BA%E8%AE%A1%E5%88%92/">
             <span class="next-text nav-default"></span>
-            <span class="next-text nav-mobile">Next</span>
+            <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
@@ -263,29 +293,18 @@
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
-      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="tigertooth4@icloud.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/tigertooth4/" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="http://tigertooth4.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -294,12 +313,12 @@
   <span class="copyright-year">
     &copy; 
     
-      2017 - 
-    2018
+      2013 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">olOwOlo</span>
+    <span class="author">XL</span>
   </span>
 </div>
     </footer>
@@ -315,6 +334,30 @@
 
 
 <script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+    displayMath: [['$$','$$'], ['\[','\]']],},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
 
 
 
