@@ -67,7 +67,7 @@ tags: ["3DP","OctoPrint","armbian","DIY"]
 13. sudo vimudo 将我们 octoprint 的 sudo 设置写入：在此文件的最后添加：octoprint
     ALL=(ALL) NOPASSWD:ALL，然后 ctrl-o 回车写入，ctrl-x 退出；
 
-14. 嗯，然后 sudo passed octoprint -d 重置密码过期信息
+14. 嗯，然后 sudo passwd octoprint -d 重置密码过期信息
 
 15. 然后安装所需的 git，python 工具：
 
