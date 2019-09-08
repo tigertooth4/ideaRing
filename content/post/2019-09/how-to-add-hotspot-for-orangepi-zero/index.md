@@ -147,6 +147,11 @@ tags: ["OrangePi","Octoprint","hotspot","ssh","Marlin","WiFi"]
 
 6. 下一次在启动 Octoprint 的时候如果找不到任何 WiFi，可以打开电脑寻找名为 CompactXY-Hotspot 的热点，密码为 1234567890，连上以后，Octoprint 的地址为 http://10.0.0.5/。
 
-# 试验
+# 测试
 
-还没做过，暂且认为有效吧！
+今天启动机器发现，无论如何设置，OrangePi 都只会连接热点，不会连接 WiFi，并且 IP 地址是 169.254.7.49。初步判断是自动连接的脚本出了问题。待今后有时间我要做进一步的分析。
+
+# 更新
+
+也许应该参考这篇[文章](http://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/158-raspberry-pi-auto-wifi-hotspot-switch-direct-connection) 。
+
