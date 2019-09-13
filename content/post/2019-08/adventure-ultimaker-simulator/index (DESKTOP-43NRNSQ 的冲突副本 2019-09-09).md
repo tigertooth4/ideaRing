@@ -1,7 +1,7 @@
 ---
 date: '2019-08-26T15:29:00+08:00'
 draft: true
-title: 试验 Ultimaker 固件模拟器
+title: Adventure of trying Ultimaker Simulator
 tags: ["Ultimaker","Simulator","Marlin","C++",]
 ---
 
