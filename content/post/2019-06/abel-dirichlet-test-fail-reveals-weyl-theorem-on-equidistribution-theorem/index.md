@@ -1,7 +1,7 @@
 ---
 title: Weyl 的等分布定理与数项级数的收敛性
 date: '2019-07-31T23:28:55+08:00'
-draft: true
+draft: false
 tags: ["Weyl","Series","Abel-Dirichlet","convergence", "equidistribution"]
 ---
 在数学分析中有很多习题是关于数项级数的收敛性的。也有很多关于收敛性的判别方法。在这些判别法中，对于一般项级数的判别方法，一般的教材中会介绍绝对收敛，交错级数的 Leibniz 判别法和 Abel-Dirichlet 判别法等。那么是不是一般项级数用这些判别法就一定能判断收敛性了呢？有没有使用这些判别法也无法判断的级数呢？

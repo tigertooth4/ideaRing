@@ -36,6 +36,7 @@ tags: ["OrangePi","Octoprint","hotspot","ssh","Marlin","WiFi"]
    ```powershell
    interface=wlan0
    #driver=rtl871xdrv
+   driver=nl80211 #updated 2020.5.8
    ssid=CompactXY-Hotspot
    hw_mode=g
    channel=6
@@ -70,7 +71,7 @@ tags: ["OrangePi","Octoprint","hotspot","ssh","Marlin","WiFi"]
    #Interface to use
    
    interface=wlan0
-   bind-interfaces
+   #bind-interfaces #updated 2020.5.8
    dhcp-range=10.0.0.3,10.0.0.20,12h
    ```
 
@@ -155,3 +156,6 @@ tags: ["OrangePi","Octoprint","hotspot","ssh","Marlin","WiFi"]
 
 也许应该参考这篇[文章](http://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/158-raspberry-pi-auto-wifi-hotspot-switch-direct-connection) 。
 
+# 更新 2020
+
+事实上，一个明显的问题是，我应该创建 `/etc/wpa_supplicant/wpa_supplicant.conf` 这个文件。

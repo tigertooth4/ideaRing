@@ -1,6 +1,6 @@
 ---
 date: '2019-08-26T15:29:00+08:00'
-draft: true
+draft: false
 title: 试验 Ultimaker 固件模拟器
 tags: ["Ultimaker","Simulator","Marlin","C++",]
 ---
@@ -32,3 +32,6 @@ tags: ["Ultimaker","Simulator","Marlin","C++",]
 3. 下载 [Arduino IDE](https://www.arduino.cc/) （ 不要下载最新版，因为 Ultimaker2Marlin 不能在最新版下编译成功）下载 1.6.10 版即可。
 4. 下载 SDL （注意 SDL 即可，不需要 SDL2 ），点 [这里](https://www.libsdl.org/download-1.2.php)，并翻到最后 Development Library, 下载 [MingW32 对应的开发库](SDL-devel-1.2.15-mingw32.tar.gz)。
 
+# 后续工作
+
+很遗憾，没有时间把它写完，只好等用空的时候再写。
