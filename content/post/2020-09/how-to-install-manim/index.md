@@ -81,3 +81,13 @@ manim scene.py SquareToCircle -pl
 
 [^link]: 代码出自 https://manimce.readthedocs.io/en/latest/tutorials/quickstart.html
 
+----
+
+# 三、更新 （ Manim 的使用范例 ）
+
+1. [Gilbert Tanner 的 github](https://github.com/TannerGilbert/Manim-Examples) 及 [博客](https://gilberttanner.com/blog/creating-math-animations-in-python-with-manim)
+2. [Rohit Malhortra 的 github](https://github.com/malhotra5/Manim-Tutorial)
+3. [Talking Physics 的博客](https://talkingphysics.wordpress.com/2019/01/08/getting-started-animating-with-manim-and-python-3-7/)
+4. [Elteoremadebeethoven 的 github](https://github.com/Elteoremadebeethoven/AnimationsWithManim)
+5. [Hitoshi Yamauchi 的 github](https://github.com/yamauchih/3b1b_manim_examples)
+6. [3b1b(Grant Sanderson) 的 github](https://github.com/3b1b/manim)
