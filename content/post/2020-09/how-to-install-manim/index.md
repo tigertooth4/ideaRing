@@ -91,3 +91,5 @@ manim scene.py SquareToCircle -pl
 4. [Elteoremadebeethoven 的 github](https://github.com/Elteoremadebeethoven/AnimationsWithManim)
 5. [Hitoshi Yamauchi 的 github](https://github.com/yamauchih/3b1b_manim_examples)
 6. [3b1b(Grant Sanderson) 的 github](https://github.com/3b1b/manim)
+7. [Manim documentation](https://azarzadavila-manim.readthedocs.io/en/latest/index.html)
+8. [ManimCE(社区版) documentation](https://manimce.readthedocs.io/en/latest/index.html)
