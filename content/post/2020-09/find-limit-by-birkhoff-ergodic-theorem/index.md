@@ -1,6 +1,6 @@
 ---
 title: 一道极限问题的证明使用了 Birkhoff 遍历定理？！
-date: '2020-09-15T23:43:00+08:00'
+date: '2020-09-15T23:46:00+08:00'
 draft: false
 tags: ["limit", "Math","Birkhoff","ergodic"]
 ---
