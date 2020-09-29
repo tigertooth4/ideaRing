@@ -1,7 +1,7 @@
 ---
 title: 写在比赛结束之后
 date: '2020-09-29T13:46:00+08:00'
-draft: true
+draft: false
 tags: ["life", "Math","teach","work"]
 
 ---
