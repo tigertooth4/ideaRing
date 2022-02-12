@@ -1,6 +1,6 @@
 ---
 title: Online FriCAS Notebooks (ft. Jupyter Notebook)
-date: '2022-1-28T10:07:00+08:00'
+date: '2022-01-28T10:07:00+08:00'
 draft: false
 tags: ["Math", "CAS", "FriCAS", "Online", "Remote", "日精一技"]
 
