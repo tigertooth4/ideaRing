@@ -1,5 +1,4 @@
-
-
+---
 title: Online FriCAS Notebooks (ft. Jupyter Notebook)
 date: '2022-1-28T10:07:00+08:00'
 draft: false
