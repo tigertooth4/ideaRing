@@ -16,7 +16,7 @@ I selected ~~Ubuntu~~ Debian Linux (Debian 11, the latest Debian Linux supported
 
 I’ve changed to AliYun afterwards, here’s the AliYun application info.
 
-【阿里云】尊敬的tgth4用户：您的云服务器ECS创建成功（实例名称：iZ2ze5eib0jy8hmapmhbg2Z，公网IP：101.200.150.204）。系统用户名： root；若您忘记或未设置密码可进入ECS控制台-实例列表-重置密码。如您购买了数据盘请在实例创建后手动磁盘格式化分区，更多信息请查看站内信或邮件。
+【阿里云】尊敬的****用户：您的云服务器ECS创建成功（实例名称：****，公网IP：***.***.150.204）。系统用户名： root；若您忘记或未设置密码可进入ECS控制台-实例列表-重置密码。如您购买了数据盘请在实例创建后手动磁盘格式化分区，更多信息请查看站内信或邮件。
 
 # 2. Installation Steps
 
