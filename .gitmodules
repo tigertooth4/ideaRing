@@ -1,3 +1,6 @@
 [submodule "kube"]
 	path = kube
 	url = https://github.com/jeblister/kube.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
