@@ -1,10 +1,9 @@
 ---
-title: Cura Slice Software Tweaks
-date: '2022-02-16T07:05:00+08:00'
+title: "Cura Slice Software Tweaks"
+date: 2022-02-16T16:34:07+08:00
 draft: false
-tags:["3DP", "dual", "Cura", "slice","G-code"]
+tags: ["3dp","cura","dual", "G-code"] 
 ---
-
 
 # 简介
 
@@ -14,7 +13,7 @@ tags:["3DP", "dual", "Cura", "slice","G-code"]
 
 # Start G-code
 
-![截屏2022-02-16 上午10.27.43.png](Cura%20Slice%20Software%20Tweaks%202c79ced77a644540a51c4cac1dfc8e03/%E6%88%AA%E5%B1%8F2022-02-16_%E4%B8%8A%E5%8D%8810.27.43.png)
+![Start G-code Introduction](./imgs/start.png)
 
 起始代码部分，Cura 会自动启动加热命令，在 g-code 起始代码前。但亲测发现还是可以在起始代码中自定义加热方式，并且 Cura 若看到了起始代码中的自定加热命令后，便不会自动在起始代码前加入加热命令。怀疑自动加热的功能是对 Ultimaker 机型说的。
 
@@ -71,7 +70,7 @@ Cura 总是在用户定义的**起始代码前**加入切换挤出机的命令 `
 
 ## End G-code
 
-![截屏2022-02-16 上午10.45.26.png](Cura%20Slice%20Software%20Tweaks%202c79ced77a644540a51c4cac1dfc8e03/%E6%88%AA%E5%B1%8F2022-02-16_%E4%B8%8A%E5%8D%8810.45.26.png)
+![End G-code Introduction](./imgs/end.png)
 
 这是我目前的结束代码
 
