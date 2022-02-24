@@ -2,7 +2,7 @@
 title: "W1s1 Volume by Slicing"
 date: 2022-02-23T12:36:54+08:00
 draft: false
-tags: ["calculus2", "teach","volume", "demos"]
+tags: ["calculus2", "teach","volume", "demos","math"]
 ---
 
 # W1-S1 Volumes by Slicing and Rotation About an Axis
