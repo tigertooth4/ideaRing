@@ -5,8 +5,6 @@ draft: false
 tags: ["calculus2", "teach", "volume","demos","math"]
 ---
 
-# W1-S2 Volumes by Slicing (cont.) , Volumes by Cylindrical Shells
-
 周次: 1
 日期: February 25, 2022
 节次: 2
