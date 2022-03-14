@@ -2,17 +2,8 @@
 title: "在 MacOS 上安装 Node.js 与 Slidev (用 Markdown 写 PPT)"
 date: 2022-03-14T12:07:33+08:00
 draft: false
-tags:["slidev","nodejs","ppt"]
+tags: ["slidev","nodejs","ppt"]
 ---
-
-Assign: 刘晓军
-Category: Blogs
-Created Time: March 13, 2022 6:26 AM
-Last edited: March 15, 2022 6:38 AM
-Status: WIP
-Tags: B.A.S.B, Knowledge
-Type: 日精一技
-科目: 电脑
 
 # 为何要使用 Node.js
 
