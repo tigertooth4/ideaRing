@@ -1,7 +1,8 @@
 ---
 title:  "W7-S1 Trigonometric Substitutions and Integration Examples"
 date: 2022-04-06T12:09:32+08:00
-draft: true
+draft: false
+tags: ["trigonometric", "substitutions", "calculus", "lectures"]
 ---
 
 周次: 7
