@@ -37,24 +37,26 @@ $$
 
 1. 考虑一个在$[0,\frac14]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_1(x)$。在前半个区间 $[0,\frac18]$ 上先找到 $x^2\sin\frac1x$ 导函数的最大零点 $z_1$，定义$f_1(x)$ 在 $[0,z_1]$ 的值与函数 $x^2\sin\frac{1}{x}$相同，而在 $[z_1,\frac18]$ 上定义 $f_1(x)$ 的值恒为 $z_1^2\sin\frac1{z_1}$。再令函数 $f_1(x)$ 在 $[\frac18,\frac14]$ 的图像与它在 $[0,\frac18]$ 的图像对称，即
   
-    $$
-    f_1(x):=
-    \begin{cases}x^2 \sin\frac1x, & x\in[0,z_1)\\ 
-    z_1^2 \sin\frac1{z_1}, &x\in[z_1,\frac18)\\ 
-    z_1^2\sin\frac1{z_1}, & x\in[\frac18,\frac14-z_1)\\ 
-    (\frac14-x)^2\sin\frac1{\frac14-x}, & x\in[\frac14-z_1,\frac14]\\ 
-    0, & \text{otherwise.}\end{cases}
-    $$
+$$
+f_1(x):=
+\begin{cases}
+x^2 \sin\frac1x, & x\in[0,z_1)\\\\ 
+z_1^2 \sin\frac1{z_1}, &x\in[z_1,\frac18)\\\\ 
+z_1^2\sin\frac1{z_1}, & x\in[\frac18,\frac14-z_1)\\\\ 
+(\frac14-x)^2\sin\frac1{\frac14-x}, & x\in[\frac14-z_1,\frac14]\\\\ 
+0, & \text{otherwise.}
+\end{cases}
+$$
     
-    现在，我们将 $f_1(x)$ 的函数图像向右平移 $3/8$ 个单位，得到一个在 $[\frac38,\frac58]$ 上不恒为零，但在此区间之外恒为零的函数 $f_1(x-\frac38)$.
+现在，我们将 $f_1(x)$ 的函数图像向右平移 $3/8$ 个单位，得到一个在 $[\frac38,\frac58]$ 上不恒为零，但在此区间之外恒为零的函数 $f_1(x-\frac38)$.
     
 2. 考虑一个在$[0,\frac1{4^2}]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_2(x)$。在前半个区间 $[0,\frac1{2\cdot 4^2}]$ 上先找到 $x^2\sin\frac1x$ 导函数的最大零点 $z_2$，定义$f_2(x)$ 在 $[0,z_2]$ 的值与函数 $x^2\sin\frac{1}{x}$相同，而在 $[z_2,\frac1{2\cdot 4^2}]$ 上定义 $f_2(x)$ 的值恒为 $z_2^2\sin\frac1{z_2}$。再令函数 $f_2(x)$ 在 $[\frac1{2\cdot 4^2},\frac1{4^2}]$ 的图像与它在 $[0,\frac1{2\cdot 4^2}]$ 的图像对称，即
   
-    $$
-    f_2(x):=\begin{cases}x^2 \sin\frac1x, & x\in[0,z_2)\\ z_2^2 \sin\frac1{z_2}, &x\in[z_2,\frac1{2\cdot 4^2})\\ z_2^2\sin\frac1{z_2}, & x\in[\frac1{2\cdot 4^2},\frac1{4^2}-z_2)\\ (\frac1{4^2}-x)^2\sin\frac1{\frac1{4^2}-x}, & x\in[\frac1{4^2}-z_2,\frac1{4^2}]\\ 0, & \text{otherwise.}\end{cases}
-    $$
+$$
+f_2(x):=\begin{cases}x^2 \sin\frac1x, & x\in[0,z_2)\\\\ z_2^2 \sin\frac1{z_2}, &x\in[z_2,\frac1{2\cdot 4^2})\\\\ z_2^2\sin\frac1{z_2}, & x\in[\frac1{2\cdot 4^2},\frac1{4^2}-z_2)\\\\ (\frac1{4^2}-x)^2\sin\frac1{\frac1{4^2}-x}, & x\in[\frac1{4^2}-z_2,\frac1{4^2}]\\\\ 0, & \text{otherwise.}\end{cases}
+$$
     
-    现在，我们将 $f_2(x)$ 的函数图像分别向右平移 $\frac5{32}$ 和 $\frac{25}{32}$ 个单位，得到一个在 $[\frac5{32},\frac7{32}]$ 和 $[\frac{25}{32},\frac{27}{32}]$ 上不恒为零，但在两区间之外恒为零的函数 。
+现在，我们将 $f_2(x)$ 的函数图像分别向右平移 $\frac5{32}$ 和 $\frac{25}{32}$ 个单位，得到一个在 $[\frac5{32},\frac7{32}]$ 和 $[\frac{25}{32},\frac{27}{32}]$ 上不恒为零，但在两区间之外恒为零的函数 。
     
 3. 重复上述构造过程。
 4. 最后，将构造得到的所有分段函数相加，就得到了 Volterra 函数，记为 $V(x)$。它的图像如下图所示。
