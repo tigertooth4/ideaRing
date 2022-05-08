@@ -11,7 +11,7 @@ tags: ["knowledge", "math", "teach", "differentiable", "non-integrable", "Rieman
 
 # Smith-Volterra-Cantor 集
 
-反例的构造需要用到 Smith-Volterra-Cantor (SVC) 集，它非常类似于 Cantor 三分集，只是改变了每次移除的区间的长度。
+反例的构造需要用到 Smith-Volterra-Cantor (SVC) 集 [3]，它的构造非常类似于 Cantor 三分集，只是改变了每次移除的区间的长度。
 
 考虑 $[0,1]$ 区间 
 
@@ -38,7 +38,12 @@ $$
 1. 考虑一个在$[0,\frac14]$上不恒为零，但在此区间外处处为 $0$ 的函数 $f_1(x)$。在前半个区间 $[0,\frac18]$ 上先找到 $x^2\sin\frac1x$ 导函数的最大零点 $z_1$，定义$f_1(x)$ 在 $[0,z_1]$ 的值与函数 $x^2\sin\frac{1}{x}$相同，而在 $[z_1,\frac18]$ 上定义 $f_1(x)$ 的值恒为 $z_1^2\sin\frac1{z_1}$。再令函数 $f_1(x)$ 在 $[\frac18,\frac14]$ 的图像与它在 $[0,\frac18]$ 的图像对称，即
   
     $$
-    f_1(x):=\begin{cases}x^2 \sin\frac1x, & x\in[0,z_1)\\ z_1^2 \sin\frac1{z_1}, &x\in[z_1,\frac18)\\ z_1^2\sin\frac1{z_1}, & x\in[\frac18,\frac14-z_1)\\ (\frac14-x)^2\sin\frac1{\frac14-x}, & x\in[\frac14-z_1,\frac14]\\ 0, & \text{otherwise.}\end{cases}
+    f_1(x):=
+    \begin{cases}x^2 \sin\frac1x, & x\in[0,z_1)\\ 
+    z_1^2 \sin\frac1{z_1}, &x\in[z_1,\frac18)\\ 
+    z_1^2\sin\frac1{z_1}, & x\in[\frac18,\frac14-z_1)\\ 
+    (\frac14-x)^2\sin\frac1{\frac14-x}, & x\in[\frac14-z_1,\frac14]\\ 
+    0, & \text{otherwise.}\end{cases}
     $$
     
     现在，我们将 $f_1(x)$ 的函数图像向右平移 $3/8$ 个单位，得到一个在 $[\frac38,\frac58]$ 上不恒为零，但在此区间之外恒为零的函数 $f_1(x-\frac38)$.
@@ -78,18 +83,8 @@ $$
 
 # 参考文献
 
-[1] 
+[1] [What is an example that a function is differentiable but derivative is not Riemann integrable](https://math.stackexchange.com/questions/257069/what-is-an-example-that-a-function-is-differentiable-but-derivative-is-not-riema)
 
-[What is an example that a function is differentiable but derivative is not Riemann integrable](https://math.stackexchange.com/questions/257069/what-is-an-example-that-a-function-is-differentiable-but-derivative-is-not-riema)
+[2] [Wrestling with the fundamental theorem of calculus](https://www.macalester.edu/~bressoud/talks/AlleghenyCollege/Wrestling.pdf)
 
-[2] 
-
-[](https://www.macalester.edu/~bressoud/talks/AlleghenyCollege/Wrestling.pdf)
-
-[3] 
-
-[Smith-Volterra-Cantor set - Wikipedia](https://en.wikipedia.org/wiki/Smith%E2%80%93Volterra%E2%80%93Cantor_set)
-
-[4]
-
-[Wrestling.pdf](%E5%AF%BC%E5%87%BD%E6%95%B0%E6%98%AF%E5%90%A6%E4%B8%80%E5%AE%9A%E9%BB%8E%E6%9B%BC%E5%8F%AF%E7%A7%AF%EF%BC%9F%20bc31c391d72d4b81b2ed49d24ec65990/Wrestling.pdf)
+[3] [Smith-Volterra-Cantor set - Wikipedia](https://en.wikipedia.org/wiki/Smith%E2%80%93Volterra%E2%80%93Cantor_set)
