@@ -1,5 +1,5 @@
 ---
-title: Weyl 的等分布定理与数项级数的收敛性
+title: Weyl 的等分布定理与数项级数$\sum_n (-1)^n \frac{|\sin(n)|}{n}$的收敛性
 date: '2019-07-31T23:28:55+08:00'
 draft: false
 tags: ["Weyl","Series","Abel-Dirichlet","convergence", "equidistribution"]
