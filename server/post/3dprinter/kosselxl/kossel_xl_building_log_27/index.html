@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kossel XL 构建记 (27) ---- The frustrating stepper motors | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="3DP, Kossel, Arduino, Bluetooth, Wiring, Frame, StepperMotor" />
+<meta name="description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开">
+<meta name="author" content="tt4">
+<link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Kossel XL 构建记 (27) ---- The frustrating stepper motors" />
+<meta property="og:description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-17T09:35:00&#43;00:00" />
+<meta property="article:modified_time" content="2014-09-17T09:35:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (27) ---- The frustrating stepper motors"/>
+<meta name="twitter:description" content="步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Kossel XL 构建记 (27) ---- The frustrating stepper motors",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kossel XL 构建记 (27) ---- The frustrating stepper motors",
+  "name": "Kossel XL 构建记 (27) ---- The frustrating stepper motors",
+  "description": "步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开",
+  "keywords": [
+    "3DP", "Kossel", "Arduino", "Bluetooth", "Wiring", "Frame", "StepperMotor"
+  ],
+  "articleBody": "步进电机和 A4988 先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开始的时候是一阵抖动，然后貌似还闻到了一些焦糊的味道-.- 电源风扇也在狂转，好像是在输出很大的功率一样！看情况不妙，急忙关掉电源开关，之后无论怎么换接口，调整步进电机的线序，马达都不!会!转！\n所以我花了一阵子来了解步进马达的基本知识： 在3D 打印机上面最常用的是 NEMA17 的两相四线 1.8 度步进的步进马达，所谓两相（2-phase），作为理科生，粗略的理解就是有两匝线圈吧！每匝都是电阻极小的铜导线，铜导线的两端引出的接线构成一对 (pairing)。 要检测哪两条线是一对，方法很简单，如果有万用表的话，可以测量一下任意两条线之间的电阻，电阻小的应该是一对；如果没有万用表也没关系，只需要把任意两条导线接在一起，根据电磁感应，如果两条导线接在一起的时候转动马达明显感到比以前费力的话，那么这两条线就是一对儿了。\n关于电流和扭矩，我的理解是：电机标定的额定电流假设是 1.7A， 那么当输入电流接近额定电流时，应该能输出到最大扭矩，额定电压我也不知道有什么关系。如何知道当前输入给电机的电流是多少呢？在这个台湾朋友的博客 中有详细的解释，或者在创客基地的博客 中也有解释：基本上要测量 A4988 电机驱动芯片上的电压 V_ref，将万用表的两个针脚分别接在 A4988 的调压旋钮 和 A4988 的 GRD 针脚上。如果想调整电压，只要记住往顺时针方向旋转是增加电压就可以了，调节旋钮上有一个平的缺口，还是非常精确和灵敏的，转动的角度一般不超过360度，观察那个平的缺口的朝向，很容易判断出转动了多少。不过，最好还是去看 Pololu 的 A4988 产品页啦! 看到产品页上的电路图，我好像明白为什么了，我可能把1A-1B-2B-2A 的意义理解错了。也许 A 和 B 应该是一对的才对(额，等等，还要观察 Ramps 板子上的走线来确定是否是这样)。\n仔细看了 Pololu 的产品页，发现还有一种 DRV8825 驱动芯片，提供 1/32 的分度和更大的电流，某宝也有销售（比 A4988 略贵).\n根据产品页上的说明，在16分步时电机通过的电流有下面的计算公式：\nI = V_{\\text{ref}} \\times 2.5 \\times 0.7. 其中 V_ref 是 A4988 芯片上测得的电压， I 是电机通过的电流. 因此，对于我所使用的电机来说，由于相电流为 1.7A，所以16分步时要把电压设在 1V 左右即可。\n步进马达的测试 在 Reprap Wiki 上面有测试步进电机的代码：\n#define X_STEP_PIN 54 #define X_DIR_PIN 55 #define X_ENABLE_PIN 38 #define X_MIN_PIN 3 #define X_MAX_PIN 2 #define Y_STEP_PIN 60 #define Y_DIR_PIN 61 #define Y_ENABLE_PIN 56 #define Y_MIN_PIN 14 #define Y_MAX_PIN 15 #define Z_STEP_PIN 46 #define Z_DIR_PIN 48 #define Z_ENABLE_PIN 62 #define Z_MIN_PIN 18 #define Z_MAX_PIN 19 #define E_STEP_PIN 26 #define E_DIR_PIN 28 #define E_ENABLE_PIN 24 #define Q_STEP_PIN 36 #define Q_DIR_PIN 34 #define Q_ENABLE_PIN 30 #define SDPOWER -1 #define SDSS 53 #define LED_PIN 13 #define FAN_PIN 9 #define PS_ON_PIN 12 #define KILL_PIN -1 #define HEATER_0_PIN 10 #define HEATER_1_PIN 8 #define TEMP_0_PIN 13 // ANALOG NUMBERING #define TEMP_1_PIN 14 // ANALOG NUMBERING void setup() { pinMode(FAN_PIN , OUTPUT); pinMode(HEATER_0_PIN , OUTPUT); pinMode(HEATER_1_PIN , OUTPUT); pinMode(LED_PIN , OUTPUT); pinMode(X_STEP_PIN , OUTPUT); pinMode(X_DIR_PIN , OUTPUT); pinMode(X_ENABLE_PIN , OUTPUT); pinMode(Y_STEP_PIN , OUTPUT); pinMode(Y_DIR_PIN , OUTPUT); pinMode(Y_ENABLE_PIN , OUTPUT); pinMode(Z_STEP_PIN , OUTPUT); pinMode(Z_DIR_PIN , OUTPUT); pinMode(Z_ENABLE_PIN , OUTPUT); pinMode(E_STEP_PIN , OUTPUT); pinMode(E_DIR_PIN , OUTPUT); pinMode(E_ENABLE_PIN , OUTPUT); pinMode(Q_STEP_PIN , OUTPUT); pinMode(Q_DIR_PIN , OUTPUT); pinMode(Q_ENABLE_PIN , OUTPUT); digitalWrite(X_ENABLE_PIN , LOW); digitalWrite(Y_ENABLE_PIN , LOW); digitalWrite(Z_ENABLE_PIN , LOW); digitalWrite(E_ENABLE_PIN , LOW); digitalWrite(Q_ENABLE_PIN , LOW); } void loop () { if (millis() %1000  【更新】 今天终于把线序问题搞清楚了，电机也能正确工作了！实际上正确的解法是不要管 Ramps 板子上的顺序，直接看上述 A4988 的原理图，图上一对的接线是挨在一起的，那么接的时候也是。这样就对了。现在还剩下计算驱动电流的问题，待有时间继续研究！现在到了研究 Marlin 的时候了！我发现，固件上传以后，电机仍然不能正常工作，好像是限位开关已经被触发了，还得研究一下，说不定得要连上 z-probe 的限位开关才可以用。\n",
+  "wordCount" : "1442",
+  "inLanguage": "zh-cn",
+  "datePublished": "2014-09-17T09:35:00Z",
+  "dateModified": "2014-09-17T09:35:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_27/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Kossel XL 构建记 (27) ---- The frustrating stepper motors
+    </h1>
+    <div class="post-meta"><span title='2014-09-17 09:35:00 +0000 UTC'>September 17, 2014</span>&nbsp;·&nbsp;tt4
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="步进电机和-a4988">步进电机和 A4988<a hidden class="anchor" aria-hidden="true" href="#步进电机和-a4988">#</a></h2>
+<p>先从步进马达说起吧！这两天一直饱受困扰！我觉得我的接线方式没有问题，可是把步进马达接到 Ramps 板的无论 X,Y, 还是 Z 接口上，都电机很异常。开始的时候是一阵抖动，然后貌似还闻到了一些焦糊的味道-.- 电源风扇也在狂转，好像是在输出很大的功率一样！看情况不妙，急忙关掉电源开关，之后无论怎么换接口，调整步进电机的线序，马达都不!会!转！</p>
+<p>所以我花了一阵子来了解步进马达的基本知识： 在3D 打印机上面最常用的是 NEMA17 的两相四线 1.8 度步进的步进马达，所谓两相（2-phase），作为理科生，粗略的理解就是有两匝线圈吧！每匝都是电阻极小的铜导线，铜导线的两端引出的接线构成一对 (pairing)。 要检测哪两条线是一对，方法很简单，如果有万用表的话，可以测量一下任意两条线之间的电阻，电阻小的应该是一对；如果没有万用表也没关系，只需要把任意两条导线接在一起，根据电磁感应，如果两条导线接在一起的时候转动马达明显感到比以前费力的话，那么这两条线就是一对儿了。</p>
+<p>关于电流和扭矩，我的理解是：电机标定的额定电流假设是 1.7A， 那么当输入电流接近额定电流时，应该能输出到最大扭矩，额定电压我也不知道有什么关系。如何知道当前输入给电机的电流是多少呢？在这个台湾朋友的<a href="http://diy3dprint.blogspot.tw/2013/11/4988.html">博客</a> 中有详细的解释，或者在创客基地的<a href="http://flyway97.blog.163.com/blog/static/2220320412013111910433463/">博客</a> 中也有解释：基本上要测量 A4988 电机驱动芯片上的电压 V_ref，将万用表的两个针脚分别接在 A4988 的调压旋钮 和 A4988 的 GRD 针脚上。如果想调整电压，只要记住往顺时针方向旋转是增加电压就可以了，调节旋钮上有一个平的缺口，还是非常精确和灵敏的，转动的角度一般不超过360度，观察那个平的缺口的朝向，很容易判断出转动了多少。不过，最好还是去看 Pololu 的 A4988 <a href="http://www.pololu.com/product/1182">产品页</a>啦! 看到产品页上的电路图，我好像明白为什么了，我可能把1A-1B-2B-2A 的意义理解错了。也许 A 和 B 应该是一对的才对(额，等等，还要观察 Ramps 板子上的走线来确定是否是这样)。</p>
+<p><img loading="lazy" src="/3DP/_images/A4988.png" alt=""  />
+</p>
+<p>仔细看了 Pololu 的产品页，发现还有一种 <a href="http://www.pololu.com/product/2133">DRV8825</a> 驱动芯片，提供 1/32 的分度和更大的电流，某宝也有销售（比 A4988 略贵).</p>
+<p><img loading="lazy" src="/3DP/_images/DRV8825.png" alt=""  />
+</p>
+<p>根据产品页上的说明，在16分步时电机通过的电流有下面的计算公式：</p>
+<pre tabindex="0"><code class="language-mathjax" data-lang="mathjax">I = V_{\text{ref}} \times 2.5 \times 0.7.
+</code></pre><p>其中 V_ref 是 A4988 芯片上测得的电压， I 是电机通过的电流. 因此，对于我所使用的电机来说，由于相电流为 1.7A，所以16分步时要把电压设在 1V 左右即可。</p>
+<h2 id="步进马达的测试">步进马达的测试<a hidden class="anchor" aria-hidden="true" href="#步进马达的测试">#</a></h2>
+<p>在 Reprap Wiki 上面有测试步进电机的代码：</p>
+<pre tabindex="0"><code class="language-c++:n" data-lang="c++:n">#define X_STEP_PIN         54
+#define X_DIR_PIN          55
+#define X_ENABLE_PIN       38
+#define X_MIN_PIN           3
+#define X_MAX_PIN           2
+
+#define Y_STEP_PIN         60
+#define Y_DIR_PIN          61
+#define Y_ENABLE_PIN       56
+#define Y_MIN_PIN          14
+#define Y_MAX_PIN          15
+
+#define Z_STEP_PIN         46
+#define Z_DIR_PIN          48
+#define Z_ENABLE_PIN       62
+#define Z_MIN_PIN          18
+#define Z_MAX_PIN          19
+
+#define E_STEP_PIN         26
+#define E_DIR_PIN          28
+#define E_ENABLE_PIN       24
+
+#define Q_STEP_PIN         36
+#define Q_DIR_PIN          34
+#define Q_ENABLE_PIN       30
+
+#define SDPOWER            -1
+#define SDSS               53
+#define LED_PIN            13
+
+#define FAN_PIN            9
+
+#define PS_ON_PIN          12
+#define KILL_PIN           -1
+
+#define HEATER_0_PIN       10
+#define HEATER_1_PIN       8
+#define TEMP_0_PIN          13   // ANALOG NUMBERING
+#define TEMP_1_PIN          14   // ANALOG NUMBERING
+
+void setup() {
+  pinMode(FAN_PIN , OUTPUT);
+  pinMode(HEATER_0_PIN , OUTPUT);
+  pinMode(HEATER_1_PIN , OUTPUT);
+  pinMode(LED_PIN  , OUTPUT);
+
+  pinMode(X_STEP_PIN  , OUTPUT);
+  pinMode(X_DIR_PIN    , OUTPUT);
+  pinMode(X_ENABLE_PIN    , OUTPUT);
+
+  pinMode(Y_STEP_PIN  , OUTPUT);
+  pinMode(Y_DIR_PIN    , OUTPUT);
+  pinMode(Y_ENABLE_PIN    , OUTPUT);
+
+  pinMode(Z_STEP_PIN  , OUTPUT);
+  pinMode(Z_DIR_PIN    , OUTPUT);
+  pinMode(Z_ENABLE_PIN    , OUTPUT);
+
+  pinMode(E_STEP_PIN  , OUTPUT);
+  pinMode(E_DIR_PIN    , OUTPUT);
+  pinMode(E_ENABLE_PIN    , OUTPUT);
+
+  pinMode(Q_STEP_PIN  , OUTPUT);
+  pinMode(Q_DIR_PIN    , OUTPUT);
+  pinMode(Q_ENABLE_PIN    , OUTPUT);
+
+   digitalWrite(X_ENABLE_PIN    , LOW);
+    digitalWrite(Y_ENABLE_PIN    , LOW);
+    digitalWrite(Z_ENABLE_PIN    , LOW);
+    digitalWrite(E_ENABLE_PIN    , LOW);
+    digitalWrite(Q_ENABLE_PIN    , LOW);
+}
+
+
+
+
+
+void loop () {
+
+  if (millis() %1000 &lt;500)
+    digitalWrite(LED_PIN, HIGH);
+  else
+   digitalWrite(LED_PIN, LOW);
+
+  if (millis() %1000 &lt;300) {
+    digitalWrite(HEATER_0_PIN, HIGH);
+    digitalWrite(HEATER_1_PIN, LOW);
+    digitalWrite(FAN_PIN, LOW);
+  } else if (millis() %1000 &lt;600) {
+    digitalWrite(HEATER_0_PIN, LOW);
+    digitalWrite(HEATER_1_PIN, HIGH);
+    digitalWrite(FAN_PIN, LOW);
+  } else  {
+    digitalWrite(HEATER_0_PIN, LOW);
+    digitalWrite(HEATER_1_PIN, LOW);
+    digitalWrite(FAN_PIN, HIGH);
+  }
+
+  if (millis() %10000 &lt;5000) {
+    digitalWrite(X_DIR_PIN    , HIGH);
+    digitalWrite(Y_DIR_PIN    , HIGH);
+    digitalWrite(Z_DIR_PIN    , HIGH);
+    digitalWrite(E_DIR_PIN    , HIGH);
+    digitalWrite(Q_DIR_PIN    , HIGH);
+  }
+  else {
+    digitalWrite(X_DIR_PIN    , LOW);
+    digitalWrite(Y_DIR_PIN    , LOW);
+    digitalWrite(Z_DIR_PIN    , LOW);
+    digitalWrite(E_DIR_PIN    , LOW);
+    digitalWrite(Q_DIR_PIN    , LOW);
+  }
+
+
+    digitalWrite(X_STEP_PIN    , HIGH);
+    digitalWrite(Y_STEP_PIN    , HIGH);
+    digitalWrite(Z_STEP_PIN    , HIGH);
+    digitalWrite(E_STEP_PIN    , HIGH);
+    digitalWrite(Q_STEP_PIN    , HIGH);
+  delay(1);
+
+    digitalWrite(X_STEP_PIN    , LOW);
+    digitalWrite(Y_STEP_PIN    , LOW);
+    digitalWrite(Z_STEP_PIN    , LOW);
+    digitalWrite(E_STEP_PIN    , LOW);
+    digitalWrite(Q_STEP_PIN    , LOW);
+
+}
+</code></pre><hr>
+<p>【更新】 今天终于把线序问题搞清楚了，电机也能正确工作了！实际上正确的解法是不要管 Ramps 板子上的顺序，直接看上述 A4988 的原理图，图上一对的接线是挨在一起的，那么接的时候也是。这样就对了。现在还剩下计算驱动电流的问题，待有时间继续研究！现在到了研究 Marlin 的时候了！我发现，固件上传以后，电机仍然不能正常工作，好像是限位开关已经被触发了，还得研究一下，说不定得要连上 z-probe 的限位开关才可以用。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/3dp/">3DP</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/kossel/">Kossel</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/arduino/">Arduino</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/bluetooth/">Bluetooth</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/wiring/">Wiring</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/frame/">Frame</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/steppermotor/">StepperMotor</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

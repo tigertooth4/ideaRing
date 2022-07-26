@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>test on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/test/</link>
+    <description>Recent content in test on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 24 May 2022 16:19:55 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</guid>
+      <description>周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms</description>
+    </item>
+    
+    <item>
+      <title>W13-S2 The Limit Comparison Test and The Ratio and Root Tests</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/</link>
+      <pubDate>Thu, 19 May 2022 14:41:38 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w13s2-the-limit-comparison-test-and-the-ratio-and-root-test/</guid>
+      <description>周次: 13 日期: May 20, 2022 节次: 2 In this lecture, the Comparison Test is upgraded to the limit case. In addition, two new tests based on the comparison with respect to the geometric series is given. These are called the Ratio Test and the Root Test, respectively. Note that all the tests are designed for a series with non-negative terms. § 11.4 The</description>
+    </item>
+    
+    <item>
+      <title>W13-S1 The Integral Test and Comparison Tests</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</guid>
+      <description>周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,</description>
+    </item>
+    
+    <item>
+      <title>W12-S2 Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</guid>
+      <description>周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term</description>
+    </item>
+    
+    <item>
+      <title>W12-S1 Infinite Sequences and Series (II)</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</link>
+      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</guid>
+      <description>周次: 12 备注: Attendance check 日期: May 11, 2022 节次: 1 In this lecture, we continue the discussion of infinite series. We introduce the L’Hôpital’s Rule to the limit finding problems, and conclude this section by an important type of convergent sequences, called bounded monotonic sequences. Then we will talk about series,</description>
+    </item>
+    
+  </channel>
+</rss>

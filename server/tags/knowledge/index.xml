@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>knowledge on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/knowledge/</link>
+    <description>Recent content in knowledge on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Jul 2022 12:12:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/knowledge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Emacs &#43; AucTeX 中编译主 LaTeX 文件</title>
+      <link>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</link>
+      <pubDate>Tue, 26 Jul 2022 12:12:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-07/emacs-auctex-compile-master-latex-file/</guid>
+      <description>背景 尽管使用 Emacs + AucTeX 编译 TeX 文件已经十多年了，但非常惭愧的是我一直是用最最基本的功能，比如 C-c C-c 编译 LaTeX 文件，`C-c `` 查看编译错误信息等等，从来没</description>
+    </item>
+    
+    <item>
+      <title>导函数是否一定黎曼可积？</title>
+      <link>http://tigertooth4.github.io/post/2022-05/volterra-function/</link>
+      <pubDate>Sun, 08 May 2022 11:59:11 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-05/volterra-function/</guid>
+      <description>本文来自一个学生的提问。 当时想了想，预感有这样的处处可导，但导函数又不黎曼可积的函数，可不知如何构造。若不要求导函数有界，则有很多例子，但若</description>
+    </item>
+    
+    <item>
+      <title>利用坚果云备份 Notability 笔记</title>
+      <link>http://tigertooth4.github.io/post/2022-04/notability-webdav-backup-use-jianguoyun/</link>
+      <pubDate>Sat, 02 Apr 2022 13:33:08 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-04/notability-webdav-backup-use-jianguoyun/</guid>
+      <description>前几天在电脑上使用 Notability 客户端批量修改笔记名称的时候，曾一度出现了 notability 笔记全部丢失的情况。所幸的是 iPad 上显示一切正常，赶紧把 iPad 的笔记同步到 iCloud 后才松了</description>
+    </item>
+    
+  </channel>
+</rss>

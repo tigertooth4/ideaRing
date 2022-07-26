@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mainboard on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/mainboard/</link>
+    <description>Recent content in mainboard on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 19 Aug 2014 13:16:00 +0000</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/mainboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kossel XL 构建记 (19) Wiring plans </title>
+      <link>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_19/</link>
+      <pubDate>Tue, 19 Aug 2014 13:16:00 +0000</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_19/</guid>
+      <description>讨厌返工，不过之前框架 &amp;lt;50% 的 infill 还是让我担心整个系统的强度。所以今天回去打算再换 50% 的 infill 打印一遍&amp;hellip;. 最让人纠结的问题就是整个电路部分</description>
+    </item>
+    
+  </channel>
+</rss>

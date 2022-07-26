@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>lectures on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/lectures/</link>
+    <description>Recent content in lectures on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 24 May 2022 16:19:55 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lectures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W14-S1 The Root Test, Alternating Series, Absolute and Conditional Convergence</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</link>
+      <pubDate>Tue, 24 May 2022 16:19:55 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w14s1-the-root-test-alternating-series-absolute-and-conditional-convergences/</guid>
+      <description>周次: 14 日期: May 25, 2022 节次: 1 In this lecture, we continue the discussion on the root test (for the series with non-negative terms). And we discuss alternating series, there’s a test called Leibniz’s or alternating series test. Alternating series converges in a manner that positive and negative terms</description>
+    </item>
+    
+    <item>
+      <title>W9-S1  Slop Fields, Separable and First-Order Linear Differential Equations</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w9s1-slope-fields-separable-eqautions-and-first-order-linear-de/</link>
+      <pubDate>Tue, 19 Apr 2022 15:17:23 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w9s1-slope-fields-separable-eqautions-and-first-order-linear-de/</guid>
+      <description>周次: 9 日期: April 20, 2022 节次: 1 In this lecture, we introduce some basic concept for differential equations, how to think of them, how to describe them and how to solve them. The most important thing is to know how to solve a differential equation. We will solve typical separable differential equations as well as the first-order linear differential equations. Chapter 9. Further</description>
+    </item>
+    
+    <item>
+      <title>W7-S1 Trigonometric Substitutions and Integration Examples</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/</link>
+      <pubDate>Wed, 06 Apr 2022 12:09:32 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w7s1-trigonometric-subs-and-integration-examples/</guid>
+      <description>周次: 7 日期: April 6, 2022 节次: 1 In this lecture, we explore more examples of integration. Trigonometric substitutions and integration by looking up the integration tables are covered. Note that most of these calculations can be done by hands. § 8.5 Three Basic Substitutions The most common substitutions are $x=a\tan\theta$, $a=\sin\theta$, and $x=a\sec\theta$. They can be useful for dealing with the integrals involving</description>
+    </item>
+    
+  </channel>
+</rss>

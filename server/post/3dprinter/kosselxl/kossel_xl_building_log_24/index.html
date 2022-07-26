@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kossel XL 构建记 (24) Electronic Box and First Marlin attempt | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="3DP, Kossel, DIY, Marlin, Firmware" />
+<meta name="description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目">
+<meta name="author" content="tt4">
+<link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt" />
+<meta property="og:description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-11T09:20:00&#43;00:00" />
+<meta property="article:modified_time" content="2014-09-11T09:20:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (24) Electronic Box and First Marlin attempt"/>
+<meta name="twitter:description" content="画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Kossel XL 构建记 (24) Electronic Box and First Marlin attempt",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kossel XL 构建记 (24) Electronic Box and First Marlin attempt",
+  "name": "Kossel XL 构建记 (24) Electronic Box and First Marlin attempt",
+  "description": "画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/ 这是组装好的前面板： Kossel XL 赫然在目",
+  "keywords": [
+    "3DP", "Kossel", "DIY", "Marlin", "Firmware"
+  ],
+  "articleBody": "画好的电路盒已经开始打印了，这个是正在打印的前面板： 为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/\n这是组装好的前面板： Kossel XL 赫然在目；）\n熬夜组装前面板及防滚架： 顺便等凌晨 1 点的水果新品发布会（结果视频直播状况频发: 首先是全世界都注意到的中国 lady 的同声传译；然后又遇到无数次的视频中断，甚至水果的官网都一度瘫痪了。。。）\n跑题了，抱歉！上图中右侧的防滚架没有考虑到 LCD 面板后面的凸起，装不上。于是人工打磨了一下，开了几个槽 ;/ （懒得再画新的了，反正安慰自己在里面看不见。可见我是一个“看脸”的人…）\n装好防滚架的前面板：  前天看到这个网站，说明如何修改 Marlin 的参数 http://www.hkepc.com/forum/viewthread.php?tid=2084008。然后他推荐了一个 Marlin 的衍生版，由 RichCattell 编写。我看了眼，发现更新的比较频繁，有对自动调平的功能有了改进，于是决定采用，地址是：https://github.com/RichCattell/Marlin/releases/tag/v1.04\n 好了，现在就开始修改 Marlin 的参数了！在 Marlin 的目录中找到 Configuration.h 这个文件。 Marlin 的设置主要在 Configuration.h 和 Configuration_adv.h 中。\n其实也没有多少要改的：主要涉及到 Delta 系打印机的几何参数，例如连杆长度等等。但是这些参数对于 Kossel 的打印质量影响很大，所以要仔细测量并更新 Configuration.h 。\n// Center-to-center distance of the holes in the diagonal push rods.  # define DEFAULT_DELTA_DIAGONAL_ROD 275.0 // mm 这是连杆从球头中心到球头中心的距离，卷尺测量了下，近 275 毫米。\n// Horizontal offset from middle of printer to smooth rod center.  #define DELTA_SMOOTH_ROD_OFFSET 214.8 //=372/sqrt(3) mm 这是从挤出头中心点到垂直铝框架中轴的距离。我是量了两个垂直铝框架中轴间的距离，除以√{3} 这样来算的。\n// Horizontal offset of the universal joints on the end effector.  #define DELTA_EFFECTOR_OFFSET 39 // mm 这是 Effector 中心到 effector 的球头连接头中心的距离。\n// Horizontal offset of the universal joints on the carriages.  #define DELTA_CARRIAGE_OFFSET 38 // mm 这是从垂直铝框架中轴，到滑车上的球头中心的距离。\n// Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.  # define BED_DIAMETER 260 // mm 这是热床的直径，我用的近 260 毫米的大床;)\n// Z-Probe variables  // Start and end location values are used to deploy/retract the probe (will move from start to end and back again)  # define Z_PROBE_OFFSET {0, 10, -5.6, 0} // X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.  # define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0} // X, Y, Z, E start location for z-probe deployment sequence  # define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0} // X, Y, Z, E end location for z-probe deployment sequence  # define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0} // X, Y, Z, E start location for z-probe retract sequence  # define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0} // X, Y, Z, E end location for z-probe retract sequence  # define AUTOLEVEL_GRID 24 // Distance between autolevel Z probing points, should be less than print surface radius/3. 这些是有关自调平系统的一些参数，先不管。自调平总是最后关心的问题。\n// Travel limits after homing  # define X_MAX_POS 130  # define X_MIN_POS -130  # define Y_MAX_POS 130  # define Y_MIN_POS -130  # define Z_MAX_POS MANUAL_Z_HOME_POS  # define Z_MIN_POS 0 这些是根据热床大小定的。Z_MAX_POS 需要测量一下，是从挤出头到热床的距离。\n除此之外，还有一个重要参数，就是：\n# define DEFAULT_AXIS_STEPS_PER_UNIT {200, 200, 200, 439.5} //{80, 80, 80, 439.5} 这是和传动机构相关的（单位运行距离（1mm）下步进电机前进的步数。200,200,200 分别代表 x,y,z 方向的步进量，439.5(用的默认值，还没改)是挤出机步进电机的步数。 我用的是 0.9 步进，GT2 的皮带（即齿间距2mm），以及 16齿的同步轮。带入网上的计算器：http://prusaprinters.org/calculator/\n或者把上述宏定义修改为下面这若干行代码1\n# define STEPS_PER_REVOLUTION_X 3200 # define STEPS_PER_REVOLUTION_Z 3200 # define STEPS_PER_REVOLUTION_E 3200 # define STEPS_PER_REVOLUTION_Y 6400 # define IDLER_TEETH_X 8 # define IDLER_TEETH_Y 8 # define BELT_PITCH_X (.2 \\* MM_PER_INCH) # define BELT_PITCH_Y (.2 \\* MM_PER_INCH) # define PITCH_OF_Z_ROD 1.25 // makergear extruder box # define EXTRUDER_GEAR_RATIO 13.0 # define PINCH_WHEEL_DIAMETER 11.59 # define AXIS_STEPS_PER_UNIT_X (STEPS_PER_REVOLUTION_X / IDLER_TEETH_X / BELT_PITCH_X) # define AXIS_STEPS_PER_UNIT_Y (STEPS_PER_REVOLUTION_Y / IDLER_TEETH_Y / BELT_PITCH_Y) # define AXIS_STEPS_PER_UNIT_Z (STEPS_PER_REVOLUTION_Z / PITCH_OF_Z_ROD) # define AXIS_STEPS_PER_UNIT_E (STEPS_PER_REVOLUTION_E \\* EXTRUDER_GEAR_RATIO / (PINCH_WHEEL_DIAMETER \\* PI)) # define DEFAULT_AXIS_STEPS_PER_UNIT {AXIS_STEPS_PER_UNIT_X, AXIS_STEPS_PER_UNIT_Y, AXIS_STEPS_PER_UNIT_Z, AXIS_STEPS_PER_UNIT_E} 其中 STEPS_PER_REVOLUTION 是指电机转动一圈的步数（对于 0.9 步进来说是 360/0.9 = 400 步，但是还有 MicroStepping，在 Ramps 主板上可以通过跳线来设置，最高是 16 分度；因此，电机转动一周实际上会有 6400 个分度。这就是这个参数的由来 ）\n 【更新】今天看到这个不错：Hacking Marlin to add extruder load/unload: http://3dwest.blogspot.hk 以往更换料丝的时候进料、退料都要的拧半天调节旋钮，有了这个进料、退料的命令后一切就应该方便了。按照这个博客所说，只需要修改：ultralcd.cpp 文件：\nstatic void lcd_prepare_menu() { START_MENU(); MENU_ITEM(back, MSG_MAIN, lcd_main_menu); #ifdef SDSUPPORT //MENU_ITEM(function, MSG_AUTOSTART, lcd_autostart_sd); #endif MENU_ITEM(gcode, MSG_DISABLE_STEPPERS, PSTR(\"M84\")); MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR(\"G28\")); MENU_ITEM(gcode, MSG_LOAD_FILAMENT, PSTR(\"G21 G1 F500 E10\")); MENU_ITEM(gcode, MSG_FEED_FILAMENT, PSTR(\"G1 F1000 E1000\")); MENU_ITEM(gcode, MSG_UNLOAD_FILAMENT, PSTR(\"G1 F1000 E-1000\")); //MENU_ITEM(gcode, MSG_SET_ORIGIN, PSTR(\"G92 X0 Y0 Z0\")); MENU_ITEM(function, MSG_PREHEAT_PLA, lcd_preheat_pla); MENU_ITEM(function, MSG_PREHEAT_ABS, lcd_preheat_abs); MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown); #if PS_ON_PIN  -1 if (powersupply) { MENU_ITEM(gcode, MSG_SWITCH_PS_OFF, PSTR(\"M81\")); }else{ MENU_ITEM(gcode, MSG_SWITCH_PS_ON, PSTR(\"M80\")); } #endif MENU_ITEM(submenu, MSG_MOVE_AXIS, lcd_move_menu); END_MENU(); } 唯一需要注意的是按照你的 Bowden 管长度来调整 MENU_ITEM 的响应代码，作者的 Bowden 管是 1米长的，所以 用了 E1000 。\n  参考：http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration ↩︎\n   ",
+  "wordCount" : "1765",
+  "inLanguage": "zh-cn",
+  "datePublished": "2014-09-11T09:20:00Z",
+  "dateModified": "2014-09-11T09:20:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_24/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Kossel XL 构建记 (24) Electronic Box and First Marlin attempt
+    </h1>
+    <div class="post-meta"><span title='2014-09-11 09:20:00 +0000 UTC'>September 11, 2014</span>&nbsp;·&nbsp;tt4
+
+</div>
+  </header> 
+  <div class="post-content"><p>画好的电路盒已经开始打印了，这个是正在打印的前面板：
+<img loading="lazy" src="/3DP/_images/DSC00557.JPG" alt=""  />
+
+为了调整好开孔的位置还是颇为费时的。我打印了三版才搞定 :/</p>
+<p>这是组装好的前面板：
+<img loading="lazy" src="/3DP/_images/DSC00558.JPG" alt=""  />
+
+Kossel XL 赫然在目；）</p>
+<p>熬夜组装前面板及防滚架：
+<img loading="lazy" src="/3DP/_images/DSC00560.JPG" alt=""  />
+
+顺便等凌晨 1 点的水果新品发布会（结果视频直播状况频发: 首先是全世界都注意到的中国 lady 的同声传译；然后又遇到无数次的视频中断，甚至水果的官网都一度瘫痪了。。。）</p>
+<p>跑题了，抱歉！上图中右侧的防滚架没有考虑到 LCD 面板后面的凸起，装不上。于是人工打磨了一下，开了几个槽 ;/ （懒得再画新的了，反正安慰自己在里面看不见。可见我是一个“看脸”的人&hellip;）</p>
+<p>装好防滚架的前面板：
+<img loading="lazy" src="/3DP/_images/DSC00561.JPG" alt=""  />
+</p>
+<hr>
+<p>前天看到这个网站，说明如何修改 Marlin 的参数 <a href="http://www.hkepc.com/forum/viewthread.php?tid=2084008">http://www.hkepc.com/forum/viewthread.php?tid=2084008</a>。然后他推荐了一个 Marlin 的衍生版，由 RichCattell 编写。我看了眼，发现更新的比较频繁，有对自动调平的功能有了改进，于是决定采用，地址是：<a href="https://github.com/RichCattell/Marlin/releases/tag/v1.04">https://github.com/RichCattell/Marlin/releases/tag/v1.04</a></p>
+<hr>
+<p>好了，现在就开始修改 Marlin 的参数了！在 Marlin 的目录中找到 Configuration.h 这个文件。 Marlin 的设置主要在 Configuration.h 和 Configuration_adv.h 中。</p>
+<p>其实也没有多少要改的：主要涉及到 Delta 系打印机的几何参数，例如连杆长度等等。但是这些参数对于 Kossel 的打印质量影响很大，所以要仔细测量并更新 Configuration.h 。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Center-to-center distance of the holes in the diagonal push rods.
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define DEFAULT_DELTA_DIAGONAL_ROD 275.0 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是连杆从球头中心到球头中心的距离，卷尺测量了下，近 275 毫米。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Horizontal offset from middle of printer to smooth rod center.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">#define DELTA_SMOOTH_ROD_OFFSET 214.8 </span><span style="color:#75715e">//=372/sqrt(3) mm
+</span></code></pre></div><p>这是从挤出头中心点到垂直铝框架中轴的距离。我是量了两个垂直铝框架中轴间的距离，除以√{3} 这样来算的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Horizontal offset of the universal joints on the end effector.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">#define DELTA_EFFECTOR_OFFSET 39  </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是 Effector 中心到 effector 的球头连接头中心的距离。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Horizontal offset of the universal joints on the carriages.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">#define DELTA_CARRIAGE_OFFSET 38 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是从垂直铝框架中轴，到滑车上的球头中心的距离。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define BED_DIAMETER 260 </span><span style="color:#75715e">// mm
+</span></code></pre></div><p>这是热床的直径，我用的近 260 毫米的大床;)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"> <span style="color:#75715e">// Z-Probe variables
+</span><span style="color:#75715e"></span> <span style="color:#75715e">// Start and end location values are used to deploy/retract the probe (will move from start to end and back again)
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_OFFSET {0, 10, -5.6, 0}  </span><span style="color:#75715e">// X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}   </span><span style="color:#75715e">// X, Y, Z, E start location for z-probe deployment sequence
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0}    </span><span style="color:#75715e">// X, Y, Z, E end location for z-probe deployment sequence
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}  </span><span style="color:#75715e">// X, Y, Z, E start location for z-probe retract sequence
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}     </span><span style="color:#75715e">// X, Y, Z, E end location for z-probe retract sequence
+</span><span style="color:#75715e"></span>
+ <span style="color:#75715e"># define AUTOLEVEL_GRID 24 </span><span style="color:#75715e">// Distance between autolevel Z probing points, should be less than print surface radius/3.
+</span></code></pre></div><p>这些是有关自调平系统的一些参数，先不管。自调平总是最后关心的问题。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Travel limits after homing
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define X_MAX_POS 130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define X_MIN_POS -130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Y_MAX_POS 130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Y_MIN_POS -130
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_MAX_POS MANUAL_Z_HOME_POS
+</span><span style="color:#75715e"></span> <span style="color:#75715e"># define Z_MIN_POS 0
+</span></code></pre></div><p>这些是根据热床大小定的。Z_MAX_POS 需要测量一下，是从挤出头到热床的距离。</p>
+<p>除此之外，还有一个重要参数，就是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"> <span style="color:#75715e"># define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 439.5} </span><span style="color:#75715e">//{80, 80, 80, 439.5}
+</span></code></pre></div><p>这是和传动机构相关的（单位运行距离（1mm）下步进电机前进的步数。200,200,200 分别代表 x,y,z 方向的步进量，439.5(用的默认值，还没改)是挤出机步进电机的步数。 我用的是 0.9 步进，GT2 的皮带（即齿间距2mm），以及 16齿的同步轮。带入网上的计算器：<a href="http://prusaprinters.org/calculator/">http://prusaprinters.org/calculator/</a></p>
+<p>或者把上述宏定义修改为下面这若干行代码<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<pre tabindex="0"><code class="language-c++:n" data-lang="c++:n"> # define STEPS_PER_REVOLUTION_X 3200
+ # define STEPS_PER_REVOLUTION_Z 3200
+ # define STEPS_PER_REVOLUTION_E 3200
+ # define STEPS_PER_REVOLUTION_Y 6400
+
+ # define IDLER_TEETH_X 8
+ # define IDLER_TEETH_Y 8
+
+ # define BELT_PITCH_X (.2 \* MM_PER_INCH)
+ # define BELT_PITCH_Y (.2 \* MM_PER_INCH)
+
+ # define PITCH_OF_Z_ROD 1.25
+
+ // makergear extruder box
+ # define EXTRUDER_GEAR_RATIO 13.0
+ # define PINCH_WHEEL_DIAMETER 11.59
+
+ # define AXIS_STEPS_PER_UNIT_X (STEPS_PER_REVOLUTION_X / IDLER_TEETH_X / BELT_PITCH_X)
+ # define AXIS_STEPS_PER_UNIT_Y (STEPS_PER_REVOLUTION_Y / IDLER_TEETH_Y / BELT_PITCH_Y)
+ # define AXIS_STEPS_PER_UNIT_Z (STEPS_PER_REVOLUTION_Z / PITCH_OF_Z_ROD)
+ # define AXIS_STEPS_PER_UNIT_E (STEPS_PER_REVOLUTION_E \* EXTRUDER_GEAR_RATIO / (PINCH_WHEEL_DIAMETER \* PI))
+ # define DEFAULT_AXIS_STEPS_PER_UNIT {AXIS_STEPS_PER_UNIT_X, AXIS_STEPS_PER_UNIT_Y, AXIS_STEPS_PER_UNIT_Z, AXIS_STEPS_PER_UNIT_E}
+</code></pre><p>其中 STEPS_PER_REVOLUTION 是指电机转动一圈的步数（对于 0.9 步进来说是 360/0.9 = 400 步，但是还有 MicroStepping，在
+Ramps 主板上可以通过跳线来设置，最高是 16 分度；因此，电机转动一周实际上会有 6400 个分度。这就是这个参数的由来 ）</p>
+<hr>
+<p>【更新】今天看到这个不错：Hacking Marlin to add extruder load/unload: <a href="http://3dwest.blogspot.hk">http://3dwest.blogspot.hk</a>
+以往更换料丝的时候进料、退料都要的拧半天调节旋钮，有了这个进料、退料的命令后一切就应该方便了。按照这个博客所说，只需要修改：ultralcd.cpp 文件：</p>
+<pre tabindex="0"><code class="language-c++:n" data-lang="c++:n"> static void lcd_prepare_menu()
+ {
+     START_MENU();
+     MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
+ #ifdef SDSUPPORT
+     //MENU_ITEM(function, MSG_AUTOSTART, lcd_autostart_sd);
+ #endif
+     MENU_ITEM(gcode, MSG_DISABLE_STEPPERS, PSTR(&quot;M84&quot;));
+     MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR(&quot;G28&quot;));
+     MENU_ITEM(gcode, MSG_LOAD_FILAMENT, PSTR(&quot;G21 G1 F500 E10&quot;));
+     MENU_ITEM(gcode, MSG_FEED_FILAMENT, PSTR(&quot;G1 F1000 E1000&quot;));
+     MENU_ITEM(gcode, MSG_UNLOAD_FILAMENT, PSTR(&quot;G1 F1000 E-1000&quot;));
+     //MENU_ITEM(gcode, MSG_SET_ORIGIN, PSTR(&quot;G92 X0 Y0 Z0&quot;));
+     MENU_ITEM(function, MSG_PREHEAT_PLA, lcd_preheat_pla);
+     MENU_ITEM(function, MSG_PREHEAT_ABS, lcd_preheat_abs);
+     MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
+ #if PS_ON_PIN &gt; -1
+     if (powersupply)
+     {
+         MENU_ITEM(gcode, MSG_SWITCH_PS_OFF, PSTR(&quot;M81&quot;));
+     }else{
+         MENU_ITEM(gcode, MSG_SWITCH_PS_ON, PSTR(&quot;M80&quot;));
+     }
+ #endif
+    MENU_ITEM(submenu, MSG_MOVE_AXIS, lcd_move_menu);
+    END_MENU();
+}
+</code></pre><p>唯一需要注意的是按照你的 Bowden 管长度来调整 MENU_ITEM 的响应代码，作者的 Bowden 管是 1米长的，所以
+用了 E1000 。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>参考：<a href="http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration">http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/3dp/">3DP</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/kossel/">Kossel</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/diy/">DIY</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/marlin/">Marlin</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/firmware/">Firmware</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

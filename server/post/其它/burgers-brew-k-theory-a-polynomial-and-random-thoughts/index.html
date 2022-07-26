@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="Math" />
+<meta name="description" content="Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.
+more
+[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] Hamburger (@Burgers &amp; Brew)[/caption]">
+<meta name="author" content="tt4">
+<link rel="canonical" href="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts" />
+<meta property="og:description" content="Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.
+more
+[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] Hamburger (@Burgers &amp; Brew)[/caption]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2012-12-05T16:10:40&#43;00:00" />
+<meta property="article:modified_time" content="2012-12-05T16:10:40&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts"/>
+<meta name="twitter:description" content="Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.
+more
+[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;] Hamburger (@Burgers &amp; Brew)[/caption]"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Burgers \u0026 Brew, K-theory, A-polynomial and Random Thoughts",
+      "item": "http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Burgers \u0026 Brew, K-theory, A-polynomial and Random Thoughts",
+  "name": "Burgers \u0026 Brew, K-theory, A-polynomial and Random Thoughts",
+  "description": "Today we went to Burgers \u0026amp; Brew for lunch. Burgers \u0026amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I\u0026rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it\u0026rsquo;s only $7 or so.\nmore\n[caption id=\u0026ldquo;attachment_427\u0026rdquo; align=\u0026ldquo;aligncenter\u0026rdquo; width=\u0026ldquo;500\u0026rdquo;] Hamburger (@Burgers \u0026amp; Brew)[/caption]",
+  "keywords": [
+    "Math"
+  ],
+  "articleBody": "Today we went to Burgers \u0026 Brew for lunch. Burgers \u0026 Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I’ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it’s only $7 or so.\nmore\n[caption id=“attachment_427” align=“aligncenter” width=“500”] Hamburger (@Burgers \u0026 Brew)[/caption]\nDuring the lunch, I asked Adam about his talk this morning. I was really want to know the basic things about K-theory. It turns out it was not too difficult concept to learn. However, to understand it, one must know what’s this concept for? He didn’t answer me about that. But anyway, this is my first time to see the definition of K-theory. And he gave me a nice article, which was the base of his talk. The article was written by S. Bloch around ’80s and published in a Lecture Notes, the title was The Dilogarithm and Extensions of Lie Algebras. He talked about the first section of the article. If I have time, I’ll read this article.\nIn this afternoon, Piotr gave a talk about super-A-polynomial. I knows nothing about A-polynomial. It might related to knot invariant. He mentioned the Volume Conjecture, which is basically about whenever we define certain Chern-Simons shape partition function w.r.t. knots K, we basically have gotten some knot invariants (for example: Jones polynomial, colored Jones polynomial, HOMFLY polynomial etc. etc. And when we taking some limit, and the result expanding in a exponential function, then the leading term S0 will be related to an integral of some algebraic curve A(x,y). Here are some references maybe I can see in the future:\n  arXiv:1203.2182 _Volume Conjecture: Refined and Categorified   arXiv:1205.1515 _Super-A-polynomial for knots and BPS states\n  _\n arXiv:1209.1416 _3d analogs of Argyres-Douglas theories and knot homologies  _\nFor me, I can continue reading arXiv:1108.0002v2 _A-polynomial, B-model, and Quantization _. And here are a lot of Prof. Zhou’s paper I can read.\nHere are Gukov’s video about categrofication:\nhttp://www.youtube.com/watch?v=skFZATzg1BA\u0026amp;list=PLCrjAFox2T31KhqXKYt4uYFsqVgdYH4mX\nThen I would like to refer to some things I was thinking today. I was thinking why we cannot do good research in China. A big reason is: in US people can communicate frequently without any difficulty. (Because geometrically, the top universities in US are relatively close to each other.) And face to face meeting or seminar are way far productive then that by using email or internet. Furthermore, in US professors love their research. While in China professors love their money more (This is definitely not in general. But I can say in many cases Chinese professors will talk about others grant rather than others research.)\nThe last thing I wouldn’t want to forget is: here is a paper about string theory, written by Greene,\narXiv:hep-th/9702155 String Theory on Calabi-Yau Manifolds. Here he mentioned from ground zero. Worth reading!\nOkey! That is definitely not all I want to mention today. But my memory and time are limited. So, I’ll continue when I remember the rest of things again. Good night world!\n",
+  "wordCount" : "517",
+  "inLanguage": "zh-cn",
+  "datePublished": "2012-12-05T16:10:40Z",
+  "dateModified": "2012-12-05T16:10:40Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/%E5%85%B6%E5%AE%83/burgers-brew-k-theory-a-polynomial-and-random-thoughts/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Burgers &amp; Brew, K-theory, A-polynomial and Random Thoughts
+    </h1>
+    <div class="post-meta"><span title='2012-12-05 16:10:40 +0000 UTC'>December 5, 2012</span>&nbsp;·&nbsp;tt4
+
+</div>
+  </header> 
+  <div class="post-content"><p>Today we went to Burgers &amp; Brew for lunch. Burgers &amp; Brew is a very famous burgers restaurant in Davis. This is by far the greatest burgers I&rsquo;ve never tried before. The beef inside tastes great! Far more better than the burgers in KFC or McDonald! I felt I had been too full after eating the hamburger! And it&rsquo;s only $7 or so.</p>
+<p>more</p>
+<p>[caption id=&ldquo;attachment_427&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo;]<a href="http://www.xjliu.net/blog/wp-content/uploads/2012/12/1c42a711.jpg"><img loading="lazy" src="http://www.xjliu.net/blog/wp-content/uploads/2012/12/1c42a711.jpg" alt=""  title="Hamburger"  />
+</a> Hamburger (@Burgers &amp; Brew)[/caption]</p>
+<p>During the lunch, I asked Adam about his talk this morning. I was really want to know the basic things about K-theory. It turns out it was not too difficult concept to learn. However, to understand it, one must know what&rsquo;s this concept for? He didn&rsquo;t answer me about that. But anyway, this is my first time to see the definition of K-theory. And he gave me a nice article, which was the base of his talk. The article was written by S. Bloch around &rsquo;80s and published in a Lecture Notes, the title was <em>The Dilogarithm and Extensions of Lie Algebras</em>. He talked about the first section of the article. If I have time, I&rsquo;ll read this article.</p>
+<p>In this afternoon, Piotr gave a talk about super-A-polynomial. I knows nothing about A-polynomial. It might related to knot invariant. He mentioned the <em>Volume Conjecture</em>, which is basically about whenever we define certain <em>Chern-Simons</em> shape partition function w.r.t. knots K, we basically have gotten some knot invariants (for example: <em>Jones polynomial</em>, <em>colored Jones polynomial</em>, <em>HOMFLY polynomial</em> etc. etc. And when we taking some limit, and the result expanding in a exponential function, then the leading term <em>S0</em> will be related to an integral of some algebraic curve A(x,y). Here are some references maybe I can see in the future:</p>
+<ul>
+<li>
+<p><a href="http://arxiv.org/abs/1203.2182" title="arXiv:1203.2182">arXiv:1203.2182</a> _Volume Conjecture: Refined and Categorified </p>
+</li>
+<li>
+<p><a href="http://arxiv.org/abs/1205.1515" title="arXiv:1205.1515">arXiv:1205.1515</a> _Super-A-polynomial for knots and BPS states</p>
+</li>
+</ul>
+<p>_</p>
+<ul>
+<li><a href="http://arxiv.org/abs/1209.1416" title="arXiv:1209.1416">arXiv:1209.1416</a> _3d analogs of Argyres-Douglas theories and knot homologies</li>
+</ul>
+<p>_</p>
+<p>For me, I can continue reading <a href="http://arxiv.org/abs/1108.0002v2" title="arXiv:1108.0002v2">arXiv:1108.0002v2</a> _A-polynomial, B-model, and Quantization _. And here are a lot of Prof. Zhou&rsquo;s paper I can read.</p>
+<p>Here are Gukov&rsquo;s video about categrofication:</p>
+<p><a href="http://www.youtube.com/watch?v=skFZATzg1BA&amp;amp;list=PLCrjAFox2T31KhqXKYt4uYFsqVgdYH4mX">http://www.youtube.com/watch?v=skFZATzg1BA&amp;amp;list=PLCrjAFox2T31KhqXKYt4uYFsqVgdYH4mX</a></p>
+<p>Then I would like to refer to some things I was thinking today. I was thinking why we cannot do good research in China. A big reason is: in US people can communicate frequently without any difficulty. (Because geometrically, the top universities in US are relatively close to each other.) And face to face meeting or seminar are way far productive then that by using email or internet. Furthermore, in US professors love their research. While in China professors love their money more (This is definitely not in general. But I can say in many cases Chinese professors will talk about others grant rather than others research.)</p>
+<p>The last thing I wouldn&rsquo;t want to forget is: here is a paper about string theory, written by Greene,</p>
+<p><a href="http://arxiv.org/abs/hep-th/9702155" title="arXiv:hep-th/9702155">arXiv:hep-th/9702155</a> <em>String Theory on Calabi-Yau Manifolds</em>. Here he mentioned from ground zero. Worth reading!</p>
+<p>Okey! That is definitely not all I want to mention today. But my memory and time are limited. So, I&rsquo;ll continue when I remember the rest of things again. Good night world!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/math/">Math</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

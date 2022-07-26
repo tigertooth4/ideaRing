@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的">
+<meta name="author" content="">
+<link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="" />
+<meta property="og:description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/" /><meta property="article:section" content="post" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public 昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的",
+  "keywords": [
+    
+  ],
+  "articleBody": "Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly Date: 2014-8-4 16:15:00 Tags: 3dp, Kossel, DIY, MIY, OpenSCAD Status: public\n昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不 到的地方把孔开得再深一些。。。 这是零件图：Y型滑轨组装起来的结果见：上面有三 颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：注意还 有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是 将来当滑轨向上运动时触发微动开关。\n还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对 最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)\n今天还设计了连接磁铁用的连杆头：因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就 设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。\n接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设 计了。\n 【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。 但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提 高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同 的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭 力也会比以前小一些。\n考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。\n 【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 YT.\n哦还有这个网站：讲那些参数是影响 Delta 的重要指标，其中有一句话意味深长：“Accurate dimensions are far less important than symmetry！”http://minow.blogspot.com/index.html#4918805519571907051\n还有这篇文章值得一看：3d-printer firmware settings stepper motor configuration: http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration\n 【更新2】终于在电机的海洋中找不到方向了。各个厂家，各种型号，各种电流大小。。。实在不知道该怎么选择了。 Reprap 的论坛上居然还说要 12V 的步进。。。然后发现一个电机的型号42BYGHW811 居然在某宝搜到了是在 Wantai 的旗舰店里卖的。高兴了一下，然后再一看，他家的42步进只有光轴的卖，没有D型的怎么固定齿轮伐？只 好继续找。好在最后找到了 Kossel 800 的电机配置：某宝 id 如下：\n 3949282634 39692700361 9475125162  不过还是对 0.9° 步进有残念。。。 算了，洗洗睡吧，明天继续研究\n 【更新3】David Ng 的google+, 他是磁头连接方式和 probeless hot end 的鼻祖吧？！ https://plus.google.com/u/0/112215345767735991135/posts/35cLAzCnvXY\n 【更新4】尼玛！KosselXL 这个名字已经被用了：http://www.builda3dprinter.eu/kosselxl-released/ 不 过这个XL并没有多少新东西。。。而且它发布的日期是 7月31号，我显然比他早几天;-)\n",
+  "wordCount" : "1264",
+  "inLanguage": "zh-cn",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_10/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><p>Title: Kossel XL 构建记 (10) Y carriage, steel ball assembly
+Date: 2014-8-4 16:15:00
+Tags: 3dp, Kossel, DIY, MIY, OpenSCAD
+Status: public</p>
+<p>昨天一晚上，终于把三颗滑块装配完毕，家里居然没有 M4x12 的螺丝了，于是用了 M4x14 的，要在滑轨背后看不
+到的地方把孔开得再深一些。。。 这是零件图：<img loading="lazy" src="/3DP/_images/DSC00408.jpg" alt=""  />
+Y型滑轨组装起来的结果见：<img loading="lazy" src="/3DP/_images/DSC00409.jpg" alt=""  />
+上面有三
+颗螺丝孔是用来固定上面的连杆支架用的。连杆的组装也很容易，最后的组装结果是这样的：<img loading="lazy" src="/3DP/_images/DSC00410.jpg" alt=""  />
+注意还
+有一颗 M3x20 的长螺丝是要拧在连杆支架上的，这颗螺丝孔的位置我是根据 K800endstop 的位置设计的，作用是
+将来当滑轨向上运动时触发微动开关。</p>
+<p>还要注意，钢球一定要牢固的固定在支架上，而且，钢球的直径要用游标卡尺确定看看是否一致（不一致的话会对
+最后的打印效果产生影响）。而且钢球在水平方向要在一条直线上。<img loading="lazy" src="/3DP/_images/DSC00412.jpg" alt=""  />
+</p>
+<p>目前，微动开关的固定件采用的是 Kossel-800 的设计，不过微动开关还没有买 ;)</p>
+<p>今天还设计了连接磁铁用的连杆头：<img loading="lazy" src="/3DP/_images/JointConnector.png" alt=""  />
+ 因为我订购了两种尺寸的打孔磁铁（OD=10mm, OD=12），所以就
+设计了两种不同大小的连杆头。但是，碳纤维杆还没买，所以现在谈设计还只是纸上谈兵。。。</p>
+<p>接下来还要采购不少东西：微动开关、步进电机、碳纤维杆等等。趁着采购的东西没到，我可以开始考虑吊台的设
+计了。</p>
+<hr>
+<p>【更新】关于步进电机的购买有些纠结了，因为有1.8°步进的还有0.9°步进的。1.8°在 3D 打印机上是最常见的。
+但是，貌似 0.9° 会带来更高的精度。上网查了一下，有人说，对于 笛卡尔系 的3D 打印机，步进电机精度的提
+高很难得到打印精度的提高。特别受制与喷嘴的直径。但是对于 Delta 系的打印机，其各个区域的打印精度是不同
+的，因此改善步进电机的精度确实能够换来打印质量的提升。但是代价是打印速度会比以前慢，而且步进电机的扭
+力也会比以前小一些。</p>
+<p>考虑到现在 Rostock 的打印质量，我在纠结是否有必要用 0.9°的步进电机。一块 0.9 步进要比通常的 1.8 步进贵十几块呢。</p>
+<hr>
+<p>【无果】不过找到了这样一个视频，是讲 mini Kossel Calibration using Repetier FW， 见 <a href="https://www.youtube.com/watch?v=uDB4hE6nyYI">YT</a>.</p>
+<p>哦还有这个网站：讲那些参数是影响 Delta 的重要指标，其中有一句话意味深长：“Accurate dimensions are
+far less important than symmetry！”<a href="http://minow.blogspot.com/index.html#4918805519571907051">http://minow.blogspot.com/index.html#4918805519571907051</a></p>
+<p>还有这篇文章值得一看：3d-printer firmware settings stepper motor configuration:
+<a href="http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration">http://www.matterhackers.com/news/3d-printer-firmware-settings-stepper-motor-configuration</a></p>
+<hr>
+<p>【更新2】终于在电机的海洋中找不到方向了。各个厂家，各种型号，各种电流大小。。。实在不知道该怎么选择了。
+Reprap 的论坛上居然还说要 12V 的步进。。。然后发现一个电机的型号42BYGHW811 居然在某宝搜到了是在
+Wantai 的旗舰店里卖的。高兴了一下，然后再一看，他家的42步进只有光轴的卖，没有D型的怎么固定齿轮伐？只
+好继续找。好在最后找到了 Kossel 800 的电机配置：某宝 id 如下：</p>
+<ul>
+<li>3949282634</li>
+<li>39692700361</li>
+<li>9475125162</li>
+</ul>
+<p>不过还是对 0.9° 步进有残念。。。 算了，洗洗睡吧，明天继续研究</p>
+<hr>
+<p>【更新3】David Ng 的google+, 他是磁头连接方式和 probeless hot end 的鼻祖吧？！
+<a href="https://plus.google.com/u/0/112215345767735991135/posts/35cLAzCnvXY">https://plus.google.com/u/0/112215345767735991135/posts/35cLAzCnvXY</a></p>
+<hr>
+<p>【更新4】尼玛！KosselXL 这个名字已经被用了：<a href="http://www.builda3dprinter.eu/kosselxl-released/">http://www.builda3dprinter.eu/kosselxl-released/</a> 不
+过这个XL并没有多少新东西。。。而且它发布的日期是 7月31号，我显然比他早几天;-)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

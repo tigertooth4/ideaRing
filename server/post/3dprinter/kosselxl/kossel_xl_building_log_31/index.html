@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kossel XL 构建记 (31) ---- The G-Code Summary  | 思｜制 - Thinking, lecturing and making</title>
+<meta name="keywords" content="3DP, Kossel, GCode" />
+<meta name="description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通">
+<meta name="author" content="tt4">
+<link rel="canonical" href="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.e5fda93abf3cc727f654cc8a13d9ef3949ae4d6d11c35ebf8377e9022955c40b.css" integrity="sha256-5f2pOr88xyf2VMyKE9nvOUmuTW0Rw16/g3fpAilVxAs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://tigertooth4.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://tigertooth4.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://tigertooth4.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://tigertooth4.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="http://tigertooth4.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.92.2" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Kossel XL 构建记 (31) ---- The G-Code Summary " />
+<meta property="og:description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-10-05T15:52:00&#43;00:00" />
+<meta property="article:modified_time" content="2014-10-05T15:52:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kossel XL 构建记 (31) ---- The G-Code Summary "/>
+<meta name="twitter:description" content="Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "http://tigertooth4.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Kossel XL 构建记 (31) ---- The G-Code Summary ",
+      "item": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kossel XL 构建记 (31) ---- The G-Code Summary ",
+  "name": "Kossel XL 构建记 (31) ---- The G-Code Summary ",
+  "description": "Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public 以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress 概览 字母 意义 Gnnn 标准 G-Code 指令 Mnnn Reprap 定义的指令 Tnnn 通",
+  "keywords": [
+    "3DP", "Kossel", "GCode"
+  ],
+  "articleBody": "Title: Date: 2014-10-05 15:52:00 Tag: 3dp, Kossel, GCode Status: public\n以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 RepRap:G-Code 以及 tontome.wordpress\n概览    字母 意义     Gnnn 标准 G-Code 指令   Mnnn Reprap 定义的指令   Tnnn 通常是挤出头的代码   Xnnn X 坐标移动，Y,Z 同理   Fnnn 进料速度，以 mm/min 为单位   Ennn 控制进入挤出机的线材的长度   Nnnn 行码    延时发出的 G 指令 这些指令是逐条进入固件并执行的。固件中一般都设有一个缓存，用来存放未执行的代码。\n   命令 解释 例子     G0 快速移动 G0 X12 : 快速在 X 方向移动 12mm   G1 可控移动 G1 X10 Y5 E20 : 从当前点移动到 X=10, Y=5 的点，并挤出 20mm 的料丝; G1 F600 可以设置挤出速度为 600mm/min   G28 移动至原点 向着限位开关的方向移动，知道碰触限位开关时停止；G28 X0 Y70 会忽略 Z 方向的复位，X, Y 的数值不起作用   G29 细致的Z探测 G29 : 每个检查点的 Z 高度都测量 3 次   G30 当前位置的 Z 探测 G30 : 只探测当前 X-Y 位置的 Z 高度   G31 通报Z限位器是否已被触发 G31   G32 用于 FPU 的Z探测     即时执行的 G 指令    命令 解释 例子     G4 停顿 G4 P200 停顿 200ms, 停顿过程中很多量仍可以被控制，如挤出头温度等   G21 设置以mm 为单位    G90 设置成绝对位置    G91 设置成相对位置    G92 设置当前点为指定坐标    M0 执行完缓冲区指令后立即停止并关机    M1 执行完缓冲区指令后进入睡眠状态    M17 步进电机加电    M18 步进电机断电    M20 列出 SD 卡 根目录的文件    M21 初始化 SD 卡    M22 推出 SD 卡    M23 选定 SD 卡上的文件    M24 开始、继续 SD 打印    M25 暂停 SD 打印    M27 报告 SD 卡状态     设定/读取    命令 解释 例子     M92 设置 axis_steps_per_units M92 X   M104 设置挤出机温度, 然后立即将控制权转交给host M104 S190 : 设置挤出机到 190°C   M105 读取挤出头和热床温度    M106 风扇开 M106 S190 : 将风扇转速设定在 0-255 之间   M107 风扇关    M109 设置挤出头温度，并等待升温到此温度    M114 得到当前的位置 X Y Z 和挤出头 E 的位置   M119 返回限位开关状态    M134 将 PID 值写入到 EEPROM    M135 设置 PID 采样间隔 M135 S300 （设置采样间隔为 300ms)   M136 打印 PID 设置到 host    M140 设置热床温度，并立即交回控制权    M190 等待热床到设定的温度 M190 S60   M201 设定打印最大加速度 M201 X1000 Y1000 Z100 E2000 （设置 X,Y, Z 和 E 的加速度 unit/second^2   M203 设定最大 Feedrate (mm/minute) M203 X6000 Y6000 Z300 E10000   M207 通过测量 Z 轴的最大活动范围来校准 Z 轴 M207 (当把打印头移动到你认为的 Z=0 处时用这个命令，打印机会自动回位并记录 Z 轴移动的距离作为 Z_MAX)   M208 设置 X Y Z 轴的最大行程 M208 X250 Y210 Z180 （Marlin 中可以通过 M500 命令把设置结果保存到 EEPROM 中）   M240 照相    M301 手动设置 PID 的值 M301 P1 I2 D3   M303 自动PID调节 设置加热头：M303 SC设置热床： M303 E-1 CS   M304 设置热床 PID 的值 M304 P1 I2 D3   M500 保存设置到 EEPROM 中 M500   M501 从 EEPROM 中读取设置 M501   M502 重置为出厂设置 M502 （还需要用 M500 保存）   M503 获取设置 M503   M565 设置探针和加热头之间的偏移量 M565 X3 Y4.5 Z-2.37   M660 设置 delta 的参数 M660 L250 R160 S200 （L = diagonal rod length, R = delta radius, S = segments per second.）   M906 设置各步进电机的电流（毫安） M906 X300 Y500 Z200 E350    Marlin-RichCattell 的特殊设定 因为我用的是 RichCattell 版本的 Marlin (此版本对于自动标定有了加强)，这里有几个命令需要强调下：\n   命令 解释 例子     G30 可以 G30 X?? Y??，这是标定特定的点，或者 G30 A 代表自动调平 G30 A 之后，探头将会标定圆周上的六个点以及圆心，得出各个 Tower 的限位开关的修正值，以及各个杆长的修正值等等。   G29 传统的 7x7 网格调平，但是我不清楚其中的机理，调平后得到的数值是 Z 轴的高度，这些数值会直接被利用来补偿打印时的误差吗？ G29 Z+0.3 让 Z 轴抬升 0.3mm    ",
+  "wordCount" : "1242",
+  "inLanguage": "zh-cn",
+  "datePublished": "2014-10-05T15:52:00Z",
+  "dateModified": "2014-10-05T15:52:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "tt4"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://tigertooth4.github.io/post/3dprinter/kosselxl/kossel_xl_building_log_31/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "思｜制 - Thinking, lecturing and making",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://tigertooth4.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://tigertooth4.github.io" accesskey="h" title="思｜制 - Thinking, lecturing and making (Alt + H)">思｜制 - Thinking, lecturing and making</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://tigertooth4.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://tigertooth4.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Kossel XL 构建记 (31) ---- The G-Code Summary 
+    </h1>
+    <div class="post-meta"><span title='2014-10-05 15:52:00 +0000 UTC'>October 5, 2014</span>&nbsp;·&nbsp;tt4
+
+</div>
+  </header> 
+  <div class="post-content"><p>Title:
+Date: 2014-10-05 15:52:00
+Tag: 3dp, Kossel, GCode
+Status: public</p>
+<p>以下我来简单总结一下我需要用到的 G-Code，本文涉及的内容大部分来自 <a href="http://reprap.org/wiki/G-code/zh_cn">RepRap:G-Code</a> 以及
+<a href="http://tontome.wordpress.com/2014/08/23/g-code-commands-supported-by-marlin/">tontome.wordpress</a></p>
+<h2 id="概览">概览<a hidden class="anchor" aria-hidden="true" href="#概览">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>字母</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gnnn</td>
+<td>标准 G-Code 指令</td>
+</tr>
+<tr>
+<td>Mnnn</td>
+<td>Reprap 定义的指令</td>
+</tr>
+<tr>
+<td>Tnnn</td>
+<td>通常是挤出头的代码</td>
+</tr>
+<tr>
+<td>Xnnn</td>
+<td>X 坐标移动，Y,Z 同理</td>
+</tr>
+<tr>
+<td>Fnnn</td>
+<td>进料速度，以 mm/min 为单位</td>
+</tr>
+<tr>
+<td>Ennn</td>
+<td>控制进入挤出机的线材的长度</td>
+</tr>
+<tr>
+<td>Nnnn</td>
+<td>行码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="延时发出的-g-指令">延时发出的 G 指令<a hidden class="anchor" aria-hidden="true" href="#延时发出的-g-指令">#</a></h2>
+<p>这些指令是逐条进入固件并执行的。固件中一般都设有一个缓存，用来存放未执行的代码。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G0</td>
+<td>快速移动</td>
+<td>G0 X12 : 快速在 X 方向移动 12mm</td>
+</tr>
+<tr>
+<td>G1</td>
+<td>可控移动</td>
+<td>G1 X10 Y5 E20 : 从当前点移动到 X=10, Y=5 的点，并挤出 20mm 的料丝; G1 F600 可以设置挤出速度为 600mm/min</td>
+</tr>
+<tr>
+<td>G28</td>
+<td>移动至原点</td>
+<td>向着限位开关的方向移动，知道碰触限位开关时停止；G28 X0 Y70 会忽略 Z 方向的复位，X, Y 的数值不起作用</td>
+</tr>
+<tr>
+<td>G29</td>
+<td>细致的Z探测</td>
+<td>G29 : 每个检查点的 Z 高度都测量 3 次</td>
+</tr>
+<tr>
+<td>G30</td>
+<td>当前位置的 Z 探测</td>
+<td>G30 : 只探测当前 X-Y 位置的 Z 高度</td>
+</tr>
+<tr>
+<td>G31</td>
+<td>通报Z限位器是否已被触发</td>
+<td>G31</td>
+</tr>
+<tr>
+<td>G32</td>
+<td>用于 FPU 的Z探测</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="即时执行的-g-指令">即时执行的 G 指令<a hidden class="anchor" aria-hidden="true" href="#即时执行的-g-指令">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G4</td>
+<td>停顿</td>
+<td>G4 P200 停顿 200ms, 停顿过程中很多量仍可以被控制，如挤出头温度等</td>
+</tr>
+<tr>
+<td>G21</td>
+<td>设置以mm 为单位</td>
+<td></td>
+</tr>
+<tr>
+<td>G90</td>
+<td>设置成绝对位置</td>
+<td></td>
+</tr>
+<tr>
+<td>G91</td>
+<td>设置成相对位置</td>
+<td></td>
+</tr>
+<tr>
+<td>G92</td>
+<td>设置当前点为指定坐标</td>
+<td></td>
+</tr>
+<tr>
+<td>M0</td>
+<td>执行完缓冲区指令后立即停止并关机</td>
+<td></td>
+</tr>
+<tr>
+<td>M1</td>
+<td>执行完缓冲区指令后进入睡眠状态</td>
+<td></td>
+</tr>
+<tr>
+<td>M17</td>
+<td>步进电机加电</td>
+<td></td>
+</tr>
+<tr>
+<td>M18</td>
+<td>步进电机断电</td>
+<td></td>
+</tr>
+<tr>
+<td>M20</td>
+<td>列出 SD 卡 根目录的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>M21</td>
+<td>初始化 SD 卡</td>
+<td></td>
+</tr>
+<tr>
+<td>M22</td>
+<td>推出 SD 卡</td>
+<td></td>
+</tr>
+<tr>
+<td>M23</td>
+<td>选定 SD 卡上的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>M24</td>
+<td>开始、继续 SD 打印</td>
+<td></td>
+</tr>
+<tr>
+<td>M25</td>
+<td>暂停 SD 打印</td>
+<td></td>
+</tr>
+<tr>
+<td>M27</td>
+<td>报告 SD 卡状态</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="设定读取">设定/读取<a hidden class="anchor" aria-hidden="true" href="#设定读取">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M92</td>
+<td>设置 axis_steps_per_units</td>
+<td>M92 X<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>M104</td>
+<td>设置挤出机温度, 然后立即将控制权转交给host</td>
+<td>M104 S190 : 设置挤出机到 190°C</td>
+</tr>
+<tr>
+<td>M105</td>
+<td>读取挤出头和热床温度</td>
+<td></td>
+</tr>
+<tr>
+<td>M106</td>
+<td>风扇开</td>
+<td>M106 S190 : 将风扇转速设定在 0-255 之间</td>
+</tr>
+<tr>
+<td>M107</td>
+<td>风扇关</td>
+<td></td>
+</tr>
+<tr>
+<td>M109</td>
+<td>设置挤出头温度，并等待升温到此温度</td>
+<td></td>
+</tr>
+<tr>
+<td>M114</td>
+<td>得到当前的位置</td>
+<td>X Y Z 和挤出头 E 的位置</td>
+</tr>
+<tr>
+<td>M119</td>
+<td>返回限位开关状态</td>
+<td></td>
+</tr>
+<tr>
+<td>M134</td>
+<td>将 PID 值写入到 EEPROM</td>
+<td></td>
+</tr>
+<tr>
+<td>M135</td>
+<td>设置 PID 采样间隔</td>
+<td>M135 S300 （设置采样间隔为 300ms)</td>
+</tr>
+<tr>
+<td>M136</td>
+<td>打印 PID 设置到 host</td>
+<td></td>
+</tr>
+<tr>
+<td>M140</td>
+<td>设置热床温度，并立即交回控制权</td>
+<td></td>
+</tr>
+<tr>
+<td>M190</td>
+<td>等待热床到设定的温度</td>
+<td>M190 S60</td>
+</tr>
+<tr>
+<td>M201</td>
+<td>设定打印最大加速度</td>
+<td>M201 X1000 Y1000 Z100 E2000 （设置 X,Y, Z 和 E 的加速度 unit/second^2</td>
+</tr>
+<tr>
+<td>M203</td>
+<td>设定最大 Feedrate (mm/minute)</td>
+<td>M203 X6000 Y6000 Z300 E10000</td>
+</tr>
+<tr>
+<td>M207</td>
+<td>通过测量 Z 轴的最大活动范围来校准 Z 轴</td>
+<td>M207 (当把打印头移动到你认为的 Z=0 处时用这个命令，打印机会自动回位并记录 Z 轴移动的距离作为 Z_MAX)</td>
+</tr>
+<tr>
+<td>M208</td>
+<td>设置 X Y Z 轴的最大行程</td>
+<td>M208 X250 Y210 Z180 （Marlin 中可以通过 M500 命令把设置结果保存到 EEPROM 中）</td>
+</tr>
+<tr>
+<td>M240</td>
+<td>照相</td>
+<td></td>
+</tr>
+<tr>
+<td>M301</td>
+<td>手动设置 PID 的值</td>
+<td>M301 P1 I2 D3</td>
+</tr>
+<tr>
+<td>M303</td>
+<td>自动PID调节</td>
+<td>设置加热头：M303 S<!-- raw HTML omitted --> C<!-- raw HTML omitted --> 设置热床： M303 E-1 C<!-- raw HTML omitted --> S<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>M304</td>
+<td>设置热床 PID 的值</td>
+<td>M304 P1 I2 D3</td>
+</tr>
+<tr>
+<td>M500</td>
+<td>保存设置到 EEPROM 中</td>
+<td>M500</td>
+</tr>
+<tr>
+<td>M501</td>
+<td>从 EEPROM 中读取设置</td>
+<td>M501</td>
+</tr>
+<tr>
+<td>M502</td>
+<td>重置为出厂设置</td>
+<td>M502 （还需要用 M500 保存）</td>
+</tr>
+<tr>
+<td>M503</td>
+<td>获取设置</td>
+<td>M503</td>
+</tr>
+<tr>
+<td>M565</td>
+<td>设置探针和加热头之间的偏移量</td>
+<td>M565 X3 Y4.5 Z-2.37</td>
+</tr>
+<tr>
+<td>M660</td>
+<td>设置 delta 的参数</td>
+<td>M660 L250 R160 S200  （L = diagonal rod length, R = delta radius, S = segments per second.）</td>
+</tr>
+<tr>
+<td>M906</td>
+<td>设置各步进电机的电流（毫安）</td>
+<td>M906 X300 Y500 Z200 E350</td>
+</tr>
+</tbody>
+</table>
+<h2 id="marlin-richcattell-的特殊设定">Marlin-RichCattell 的特殊设定<a hidden class="anchor" aria-hidden="true" href="#marlin-richcattell-的特殊设定">#</a></h2>
+<p>因为我用的是 RichCattell 版本的 Marlin (此版本对于自动标定有了加强)，这里有几个命令需要强调下：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G30</td>
+<td>可以 G30 X?? Y??，这是标定特定的点，或者 G30 A 代表自动调平</td>
+<td>G30 A 之后，探头将会标定圆周上的六个点以及圆心，得出各个 Tower 的限位开关的修正值，以及各个杆长的修正值等等。</td>
+</tr>
+<tr>
+<td>G29</td>
+<td>传统的 7x7 网格调平，但是我不清楚其中的机理，调平后得到的数值是 Z 轴的高度，这些数值会直接被利用来补偿打印时的误差吗？</td>
+<td>G29 Z+0.3 让 Z 轴抬升 0.3mm</td>
+</tr>
+</tbody>
+</table>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://tigertooth4.github.io/tags/3dp/">3DP</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/kossel/">Kossel</a></li>
+      <li><a href="http://tigertooth4.github.io/tags/gcode/">GCode</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://tigertooth4.github.io">思｜制 - Thinking, lecturing and making</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>integral on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/integral/</link>
+    <description>Recent content in integral on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Jun 2022 21:31:17 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/integral/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W16-S2 Applications of Power Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</link>
+      <pubDate>Fri, 10 Jun 2022 21:31:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</guid>
+      <description>周次: 16 日期: June 10, 2022 节次: 2 In this lecture, various applications for Taylor series are demonstrated. And we show how to generate a Fourier series from $f(x)$ in the end of the lecture. § 11.10 Applications of Power Series The Binomial Series for Powers and Roots The Taylor series generates by $f(x) = (1+x)^a$, when $a$ is constant, is called the binomial</description>
+    </item>
+    
+    <item>
+      <title>W13-S1 The Integral Test and Comparison Tests</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</guid>
+      <description>周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,</description>
+    </item>
+    
+    <item>
+      <title>W7-S2 Numerical Integration</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/</link>
+      <pubDate>Thu, 07 Apr 2022 14:47:12 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/</guid>
+      <description>周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2 In this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically,</description>
+    </item>
+    
+  </channel>
+</rss>

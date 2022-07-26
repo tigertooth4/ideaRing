@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>lecture on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/lecture/</link>
+    <description>Recent content in lecture on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Jun 2022 21:31:17 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/lecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W16-S2 Applications of Power Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</link>
+      <pubDate>Fri, 10 Jun 2022 21:31:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w16s2-applications-of-power-series/</guid>
+      <description>周次: 16 日期: June 10, 2022 节次: 2 In this lecture, various applications for Taylor series are demonstrated. And we show how to generate a Fourier series from $f(x)$ in the end of the lecture. § 11.10 Applications of Power Series The Binomial Series for Powers and Roots The Taylor series generates by $f(x) = (1+x)^a$, when $a$ is constant, is called the binomial</description>
+    </item>
+    
+    <item>
+      <title>W16-Extra1 Convergence of Taylor Series; Error Estimates</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/</link>
+      <pubDate>Thu, 09 Jun 2022 11:32:36 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w16extra-convergence-of-taylor-series-error-estimates/</guid>
+      <description>周次: 16 日期: June 9, 2022 节次: Extra1 In this lecture, we estimate the error of Taylor polynomial to the generating function. The result provides a criteria for the convergence of Taylor series. A lot of common functions can be expanded to Taylor series according to this result. And without the proof, we will see that more common functions can be represented by power</description>
+    </item>
+    
+    <item>
+      <title>W14-S2 Absolute and Conditional Convergence, Power Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/</link>
+      <pubDate>Thu, 26 May 2022 17:51:07 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w14s2-absolute-conditional-convergence-power-series/</guid>
+      <description>周次: 14 日期: May 27, 2022 节次: 2 In this lecture, we will continue the discussion of absolute and conditional convergence, give the absolute convergence test to show any absolutely convergent series itself must converge. We also look at the difference between absolute and conditional convergences by showing that an absolute convergent series remains the same even after the rearrangement of the terms. However,</description>
+    </item>
+    
+    <item>
+      <title>W13-S1 The Integral Test and Comparison Tests</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</link>
+      <pubDate>Tue, 17 May 2022 16:45:17 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w13s1-integral-test-and-comparison-tests/</guid>
+      <description>周次: 13 日期: May 18, 2022 节次: 1 In this lecture, we develop some convergence tests for the series with non-negative terms. These are the Integral Test and Comparison Tests. Both tests are based on the Monotonic Bounded Theorem for partial sum sequences. Before developing the tests, we will recap the previous section first. I. Recap: § 11.2 Series Basic Problems for Series Primarily,</description>
+    </item>
+    
+    <item>
+      <title>W12-S2 Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</link>
+      <pubDate>Thu, 12 May 2022 13:20:39 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s2-series/</guid>
+      <description>周次: 12 日期: May 13, 2022 节次: 2 In this lecture, we will talk about series, we introduce the sigma notation, and utilize limit to define the sum of a series. Primarily, there are two types of series whose sums can be found directly, by definition. Those are called Geometric Series and Telescoping Series. To study a divergent series, we introduce the $n$th term</description>
+    </item>
+    
+    <item>
+      <title>W12-S1 Infinite Sequences and Series (II)</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</link>
+      <pubDate>Tue, 10 May 2022 16:37:28 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w12s1-infinite-sequences-and-series-ii/</guid>
+      <description>周次: 12 备注: Attendance check 日期: May 11, 2022 节次: 1 In this lecture, we continue the discussion of infinite series. We introduce the L’Hôpital’s Rule to the limit finding problems, and conclude this section by an important type of convergent sequences, called bounded monotonic sequences. Then we will talk about series,</description>
+    </item>
+    
+    <item>
+      <title>W11-S1 Infinite Sequences and Series</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/</link>
+      <pubDate>Thu, 05 May 2022 11:43:25 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w11s1-sequences/</guid>
+      <description>周次: 11 日期: May 6, 2022 节次: 2 In this lecture, we will discuss series and sequences, these are new concept and very important ones. Before talking about series, we will talk about sequences. Overview In this chapter we study how to add together infinitely many numbers. This is a subject of the theory of infinite series. It is clear that infinite sum sometimes</description>
+    </item>
+    
+    <item>
+      <title>W10-S2 Applications of First-Order Differential Equations</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/</link>
+      <pubDate>Thu, 28 Apr 2022 16:22:21 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w10s2-applications-of-first-order-de/</guid>
+      <description>周次: 10 日期: April 29, 2022 节次: 2 In today’s lecture, we are going to look at three typical applications of first-order differential equations. Analyzes an object moving along a straight line while subject to a force opposing its motion. A model of population growth which takes into account factors in the environment placing limits on growth. A</description>
+    </item>
+    
+    <item>
+      <title>W10-S1 Euler’s Method and Graphical Solutions for Autonomous DE</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/</link>
+      <pubDate>Tue, 26 Apr 2022 13:48:51 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w10s1-euler-method-graphical-solution-for-autonomous-de/</guid>
+      <description>周次: 10 日期: April 27, 2022 节次: 1 In this lecture, we talk briefly on the numerical method for solving an initial value problem for a general first order differential equation. The method is called Euler’s Method, it is the most simplest numerical method for solving a differential equation. Secondly, we will look at how to sketch graphical</description>
+    </item>
+    
+    <item>
+      <title>W9-S2 Applications, Euler’s Method for Numerical DE  Solving</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</link>
+      <pubDate>Thu, 21 Apr 2022 23:24:40 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w9s2-applications-euler-method-for-solving-de/</guid>
+      <description>周次: 9 日期: April 22, 2022 节次: 2 In this lecture, we would like to give several examples on solving differential equations. Three examples will be shown. And Euler’s method for numerical solution for the initial value problem of differential equations will also be explored. Solving Linear Equations We solve the equation $$ \dfrac{dy}{dx} + P(x), y =</description>
+    </item>
+    
+    <item>
+      <title>W8-S2 Improper Integrals and Differential Equations</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/</link>
+      <pubDate>Thu, 14 Apr 2022 12:36:20 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w8s2-improper-integrals-and-differential-equations/</guid>
+      <description>周次: 8 日期: April 15, 2022 节次: 2 In this lecture, we discuss the improper integral of type II, as well as the convergence test for improper integral of type I with non-negative integrands. In the section part, we will talk about the simplest differential equations, the geometric visualization of a differential equation with slope fields, and separable equations. Type II Improper Integrals Definition.</description>
+    </item>
+    
+    <item>
+      <title>W8-§1 Improper Integrals</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/</link>
+      <pubDate>Tue, 12 Apr 2022 16:22:15 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w8s1-improper-integrals/</guid>
+      <description>周次: 8 备注: Attendance check 日期: April 13, 2022 节次: 1 In this lecture, we consider integrals when the domain of integration is infinite, or the range of the integrand is infinite. Such cases are not Riemann integrable, therefore, they are called improper integrals. We would like to manage the integrations for these cases, via some limit procedure. Outline Improper Integrals of</description>
+    </item>
+    
+    <item>
+      <title>W7-S2 Numerical Integration</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/</link>
+      <pubDate>Thu, 07 Apr 2022 14:47:12 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w7s2-numerical-integration/</guid>
+      <description>周次: 7 备注: Attendance check 日期: April 8, 2022 节次: 2 In this lecture, we will take a quick glance at the Numerical Integration methods. Numerical integrations are very useful in practice. The methods we are going to learn are Trapezoidal Method and Simpson’s Method. We will learn how to evaluate an integration numerically,</description>
+    </item>
+    
+    <item>
+      <title>W6-S2 Integration of Rational Functions and Trigonometric Integrals</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w6s2-integration-of-rational-functions-and-trigonometric-integration/</link>
+      <pubDate>Thu, 31 Mar 2022 11:42:35 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w6s2-integration-of-rational-functions-and-trigonometric-integration/</guid>
+      <description>周次: 6 日期: April 1, 2022 节次: 2 In this lecture, we continue presenting the integration of rational functions. After finishing this part, we are going to discuss some trigonometric integration techniques. Outline § 8.3 Integration of Rational Functions Method of Partial Fractions ( for $f(x)/g(x)$ Proper) Factorize the denominator $g(x)$, obtain all its linear and quadratic factors, as well as their powers. In</description>
+    </item>
+    
+    <item>
+      <title>W6-S1 Integration by Parts and Integration of Rational Functions</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w6s1-integration-by-parts-integration-of-rational-functions/</link>
+      <pubDate>Tue, 29 Mar 2022 14:07:16 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w6s1-integration-by-parts-integration-of-rational-functions/</guid>
+      <description>周次: 6 日期: March 30, 2022 节次: 1 In this lecture, we’ll learn a new technique for integration, called Integration by Parts. The second part of the lecture will be devoted to the partial fractions decomposition of rational functions. By using such technique, we are able to integrate all the rational functions! § 8.2 Integration by Parts Integration by parts</description>
+    </item>
+    
+    <item>
+      <title>W5-S2 Integration Techniques</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w5s2-integration-techniques/</link>
+      <pubDate>Thu, 24 Mar 2022 11:20:27 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w5s2-integration-techniques/</guid>
+      <description>周次: 5 日期: March 25, 2022 节次: 2 In this course, we will discuss the definition of hyperbolic functions. And we shift our attention to several integration techniques. These techniques can help us integrate more functions. A typical technique called “Integration by Parts” will be discussed as well.</description>
+    </item>
+    
+    <item>
+      <title>W4-S2 Transcendental Functions (2)</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w4s2-transcendental-functions-2/</link>
+      <pubDate>Thu, 17 Mar 2022 12:26:22 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w4s2-transcendental-functions-2/</guid>
+      <description>周次: 4 备注: Attendance check 日期: March 18, 2022 节次: 2 In this lecture, we continue on the discussion of logarithmic and exponential functions. The simplest differential equation is discussed, there are a lot of real applications even for such simple equations. And the definitions of growth rates are given in terms of the notation “big-oh</description>
+    </item>
+    
+    <item>
+      <title>W4-S1 Transcendental Functions</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w4s1-transcendental-functions/</link>
+      <pubDate>Tue, 15 Mar 2022 16:44:29 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w4s1-transcendental-functions/</guid>
+      <description>周次: 4 日期: March 16, 2022 节次: 1 In this and next lectures, we will quickly go through the contents in chapter 7. Since a lot of the contents have been taught last semester or have known in high school age. § 7.1 Inverse Functions and Their Derivatives We have learned inverse functions, their domain and range, their graph, etc. In particular, we have</description>
+    </item>
+    
+    <item>
+      <title>W3-S2 Work, Fluid Pressure and Forces</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w3s2-work-fluid-pressure-force/</link>
+      <pubDate>Fri, 11 Mar 2022 13:24:26 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w3s2-work-fluid-pressure-force/</guid>
+      <description>周次: 3 日期: March 11, 2022 节次: 2 In this lecture, we’ll give a brief introduction to the concepts of works and fluid pressures. Many examples will be presented. This lecture covers §6.6 and §6.7. Outline Work Work refers specifically to a force acting on a body and the body</description>
+    </item>
+    
+    <item>
+      <title>W3-S1 Areas of Surfaces of Revolution and the Theorem of Pappus</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w3s1-area-of-surface-or-revolution-theorems-of-pappus/</link>
+      <pubDate>Tue, 08 Mar 2022 14:16:08 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w3s1-area-of-surface-or-revolution-theorems-of-pappus/</guid>
+      <description>周次: 3 日期: March 9, 2022 节次: 1 A curve sweeps out a surface in the space around is called a surface of revolution. The “area” of this surface depends on the length of the rope and the distance of each of its segments from the axis of revolution. In this section, we calculate the area of surface of</description>
+    </item>
+    
+    <item>
+      <title>W2-S2 Moments and Center of Masses</title>
+      <link>http://tigertooth4.github.io/post/2022-calculus2/w2s2-moments-and-center-of-masses/</link>
+      <pubDate>Fri, 04 Mar 2022 13:33:29 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2022-calculus2/w2s2-moments-and-center-of-masses/</guid>
+      <description>周次: 2 日期: March 4, 2022 节次: 2 Outline In this lecture, we discuss moments ( 质量矩）and centers of mass. Two concepts are related. In this lecture, we only deal with one- and two-dimensional problems (Essentially all the problems been dealt with are in one-dimension). Basic Principle for Center of Mass and Moment Definition. (Center of Mass) For</description>
+    </item>
+    
+  </channel>
+</rss>

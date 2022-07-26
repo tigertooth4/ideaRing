@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Marlin2.0 on 思｜制 - Thinking, lecturing and making</title>
+    <link>http://tigertooth4.github.io/tags/marlin2.0/</link>
+    <description>Recent content in Marlin2.0 on 思｜制 - Thinking, lecturing and making</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 05 Oct 2019 22:15:00 +0800</lastBuildDate><atom:link href="http://tigertooth4.github.io/tags/marlin2.0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多灾多难的 CompactXY 终于快迎来第一次打印了</title>
+      <link>http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/</link>
+      <pubDate>Sat, 05 Oct 2019 22:15:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-10/compactxy-octoprint-before-first-print/</guid>
+      <description>本以为 CompactXY 所有问题都基本搞定了，没想到 Marlin2.0 还是让我们掉到了坑里，这次是因为 load/unload filament，OctoPrint 中的 change filament 插件并没有按照我所预想的</description>
+    </item>
+    
+    <item>
+      <title>为 Cohesion3d-Remix 主板连接 i2c OLED 显示屏和旋转编码器</title>
+      <link>http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/</link>
+      <pubDate>Tue, 23 Jul 2019 22:58:00 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-07/c3d-remix-i2c-oled-display-and-rotary-encoder/</guid>
+      <description>在多次的失望尝试之后，正如本文标题所述，我终于为 Cohesion3d-Remix 这块主板加上了一块屏幕和旋转编码器。当然，所用的并不是 Cohesion3d-Remix （以下简称 C3D）的原生 Smoothieware 固件（曾</description>
+    </item>
+    
+    <item>
+      <title>Cohesion3d 主板使用 TMC2130 以及 Marlin2.0 实现无传感器归零</title>
+      <link>http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/</link>
+      <pubDate>Sat, 20 Apr 2019 22:47:37 +0800</pubDate>
+      
+      <guid>http://tigertooth4.github.io/post/2019-04/c3d-sensorless-homing-with-tmc2130-marlin2/</guid>
+      <description>自从娃出生以来，一直没有时间，今天算是忙里偷闲，开始研究如何在 Cohesion3d-Remix 这块主控板上实现「无传感器归零」（sensorless homing)。所谓无</description>
+    </item>
+    
+  </channel>
+</rss>
