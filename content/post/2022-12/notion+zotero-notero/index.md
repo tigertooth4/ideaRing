@@ -2,19 +2,8 @@
 title: "Notion + Zotero = Notero!"
 date: 2022-12-11T12:39:45+08:00
 draft: false
-tags:["Notion", "Zotero", "Notero", "references", "academic", "research", "literature"]
+tags: ["Notion", "zotero", "notero", "references", "academic", "research", "literature", "B.A.S.B"]
 ---
-
-# Notion + Zotero = Notero!
-
-Assign: 刘晓军
-Category: Blogs, Studies
-Created Time: December 10, 2022 5:31 PM
-Last edited: December 11, 2022 11:35 AM
-Status: Finished
-Tags: B.A.S.B, Notion, Zotero
-Type: 日精一技
-科目: 教学研究, 科研
 
 # 前言
 
